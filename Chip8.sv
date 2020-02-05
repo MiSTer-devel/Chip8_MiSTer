@@ -138,15 +138,16 @@ wire  [7:0] ioctl_data;
 wire  [7:0] ioctl_index;
 wire        ioctl_download;
 wire 			ioctl_wait;
-wire [10:0] ps2_key;
+//wire [10:0] ps2_key;
 wire  [1:0] buttons;
 wire [21:0] gamma_bus;
 
 wire [14:0] ldata, rdata;
 
+wire ps2_clk;
+wire [7:0] ps2_dat;
 
-
-hps_io #(.STRLEN($size(CONF_STR)>>3)) hps_io
+hps_io #(.STRLEN($size(CONF_STR)>>3),.PS2DIV(4000)) hps_io
 (
 	.clk_sys(clk_sys),
 	.HPS_BUS(HPS_BUS),
@@ -163,8 +164,10 @@ hps_io #(.STRLEN($size(CONF_STR)>>3)) hps_io
 	
 	.buttons(buttons),
 	.status(status),
+	
+	.ps2_kbd_clk_out(ps2_clk),
+	.ps2_kbd_data_out(ps2_dat),
 
-	.ps2_key(ps2_key)
 );
 
 
@@ -235,7 +238,7 @@ end
 	
 assign clk_sys = CLK_50M;
 assign CLK_VIDEO = clk_video;
-assign cpu_clk = status[2] ? clk_cpu_fast : clk_cpu_slow;
+assign cpu_clk = status[2] ? clk_cpu_slow : clk_cpu_fast;
 
 // Reset circuit
 
@@ -289,12 +292,13 @@ chip8 chip8machine(
 
 	audio_enable,
 	
-	ps2_key,
+	ps2_dat,
+	ps2_clk,
 	
 	ioctl_download,
 	ioctl_wr,
 	clk_sys,
-	ioctl_addr[11:0],
+	ioctl_addr[11:0] + 12'd512,
 	ioctl_data,
 	
 	error

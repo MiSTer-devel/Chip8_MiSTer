@@ -38,9 +38,8 @@ module chip8(
 	
 	output			audio_enable,
 	
-//	input				ps2_data,
-//	input				ps2_clk,
-	input [10:0]   ps2_key,
+	input				ps2_data,
+	input				ps2_clk,
 	
 	input				uploading,
 	input				upload_en,
@@ -111,40 +110,37 @@ wire			keyboard_ready;
 reg  [15:0]	keyboard_matrix;
 reg         keyboard_down_flag = 1;
 
-//ps2in Ps2Decoder(
-//	.ps2_clk  (ps2_clk),
-//	.ps2_data (ps2_data),
-//	.ready    (keyboard_ready),
-//	.data     (keyboard_data)
-//);
+ps2in Ps2Decoder(
+	.ps2_clk  (ps2_clk),
+	.ps2_data (ps2_data),
+	.ready    (keyboard_ready),
+	.data     (keyboard_data)
+);
 
-assign keyboard_ready = ps2_key[9];
-assign keyboard_data = ps2_key[7:0];
-
-//always @(posedge keyboard_ready)
-//	if (keyboard_data == 8'hF0) begin
-//		keyboard_down_flag <= 0;
-//	end else begin
-//		case (keyboard_data)
-//			8'h16: keyboard_matrix[4'h1] = keyboard_down_flag;
-//			8'h1E: keyboard_matrix[4'h2] = keyboard_down_flag;
-//			8'h26: keyboard_matrix[4'h3] = keyboard_down_flag;
-//			8'h25: keyboard_matrix[4'hC] = keyboard_down_flag;
-//			8'h15: keyboard_matrix[4'h4] = keyboard_down_flag;
-//			8'h1D: keyboard_matrix[4'h5] = keyboard_down_flag;
-//			8'h24: keyboard_matrix[4'h6] = keyboard_down_flag;
-//			8'h2D: keyboard_matrix[4'hD] = keyboard_down_flag;
-//			8'h1C: keyboard_matrix[4'h7] = keyboard_down_flag;
-//			8'h1B: keyboard_matrix[4'h8] = keyboard_down_flag;
-//			8'h23: keyboard_matrix[4'h9] = keyboard_down_flag;
-//			8'h2B: keyboard_matrix[4'hE] = keyboard_down_flag;
-//			8'h1A: keyboard_matrix[4'hA] = keyboard_down_flag;
-//			8'h22: keyboard_matrix[4'h0] = keyboard_down_flag;
-//			8'h21: keyboard_matrix[4'hB] = keyboard_down_flag;
-//			8'h2A: keyboard_matrix[4'hF] = keyboard_down_flag;
-//		endcase
-//		keyboard_down_flag <= 1;
-//	end
+always @(posedge keyboard_ready)
+	if (keyboard_data == 8'hF0) begin
+		keyboard_down_flag <= 0;
+	end else begin
+		case (keyboard_data)
+			8'h16: keyboard_matrix[4'h1] = keyboard_down_flag;
+			8'h1E: keyboard_matrix[4'h2] = keyboard_down_flag;
+			8'h26: keyboard_matrix[4'h3] = keyboard_down_flag;
+			8'h25: keyboard_matrix[4'hC] = keyboard_down_flag;
+			8'h15: keyboard_matrix[4'h4] = keyboard_down_flag;
+			8'h1D: keyboard_matrix[4'h5] = keyboard_down_flag;
+			8'h24: keyboard_matrix[4'h6] = keyboard_down_flag;
+			8'h2D: keyboard_matrix[4'hD] = keyboard_down_flag;
+			8'h1C: keyboard_matrix[4'h7] = keyboard_down_flag;
+			8'h1B: keyboard_matrix[4'h8] = keyboard_down_flag;
+			8'h23: keyboard_matrix[4'h9] = keyboard_down_flag;
+			8'h2B: keyboard_matrix[4'hE] = keyboard_down_flag;
+			8'h1A: keyboard_matrix[4'hA] = keyboard_down_flag;
+			8'h22: keyboard_matrix[4'h0] = keyboard_down_flag;
+			8'h21: keyboard_matrix[4'hB] = keyboard_down_flag;
+			8'h2A: keyboard_matrix[4'hF] = keyboard_down_flag;
+		endcase
+		keyboard_down_flag <= 1;
+	end
 
 // CPU memory
 
