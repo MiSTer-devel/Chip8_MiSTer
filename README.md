@@ -5,7 +5,7 @@ This is a Verilog implementation of the SuperChip virtual machine. The implement
 This core has been ported from MiST to MiSTer by Paul Sajna.
 Original core is by Carsten Elton Sørensen.
 
-For an introduction to Chip-8 and SuperChip, please see [the Chip-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8). Another great resource is http://chip8.com/, particularly the [pack of all known ROMs](http://chip8.com/downloads/Chip-8%20Pack.zip) for Chip-8 is handy.
+For an introduction to Chip-8 and SuperChip, please see [the Chip-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8). 
 
 SuperChip has traditionally been implemented as a virtual machine, but this is a pure Verilog implementation of the CPU, display and blitter. The CPU runs at a user selectable speed of a whopping 5 kHz or 12.5 kHz. An instruction usually takes 5 cycles, some a bit longer. The blitter runs at a much faster clock rate than the CPU, 50 MHz on the MiST, so sprite and scroll instructions only add a couple of CPU cycles.
 
