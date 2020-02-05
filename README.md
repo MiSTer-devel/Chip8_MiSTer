@@ -27,4 +27,4 @@ The Chip-8 machine has a hex keypad for input. This has been mapped to the PC ke
 
 # Download #
 
-Downloads can be found in the [releases folder](https://github.com/sajattack/Chip8_MiSTer/tree/master/releases)
+Downloads can be found in the [releases folder](https://github.com/MiSTer-devel/Chip8_MiSTer/tree/master/releases)
