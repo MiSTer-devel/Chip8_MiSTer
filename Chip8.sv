@@ -109,18 +109,17 @@ module emu
 	input         OSD_STATUS
 );
 
-assign ADC_BUS  = 'Z;
-assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
-assign BUTTONS = 0;
-
 
 `include "build_id.v" 
 localparam CONF_STR = {
 	"Chip8;;",
+	"-;",
 	"F,CH8;",
-	"O2,CPU Speed,Fast,Slow;",
+	"-;",
 	"O4,Aspect ratio,4:3,16:9;",
-	//"O8A,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
+	"O8A,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
+	"-;",
+	"O2,CPU Speed,Fast,Slow;",
 	"-;",
 	"R0,Reset;",
 	//"J,",
@@ -182,6 +181,7 @@ wire audio = audio_enable && &audio_count[4:3];
 assign AUDIO_R = {1'b0,{15{audio}}};
 assign AUDIO_L = {1'b0,{15{audio}}};
 assign AUDIO_S = 1;
+assign AUDIO_MIX = 0;
 
 assign LED_POWER = 0;
 assign LED_DISK  = 0;
@@ -191,6 +191,22 @@ assign VIDEO_ARX    = status[4] ? 8'd16 : 8'd4;
 assign VIDEO_ARY    = status[4] ? 8'd9  : 8'd3;
 
 assign CE_PIXEL = 1'b1;
+
+wire [2:0] scale = status[10:8];
+wire [2:0] sl = scale ? scale - 1'd1 : 3'd0;
+
+assign VGA_SL = sl[1:0];
+assign VGA_F1 = 0;
+
+assign {SDRAM_DQ, SDRAM_A, SDRAM_BA, SDRAM_CKE, SDRAM_CLK, SDRAM_DQML, SDRAM_DQMH, SDRAM_nWE, SDRAM_nCAS, SDRAM_nRAS, SDRAM_nCS} = 'Z;
+assign {DDRAM_CLK, DDRAM_BURSTCNT, DDRAM_ADDR, DDRAM_DIN, DDRAM_BE, DDRAM_RD, DDRAM_WE} = 0;
+assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
+
+assign USER_OUT = '1;
+assign ADC_BUS  = 'Z;
+assign BUTTONS = 0;
+assign {UART_RTS, UART_TXD, UART_DTR} = 0;
+
 
 wire clk_sys; // 50MHz
 wire clk_cpu_fast, clk_cpu_slow; // 12.5KHz or 5KHz
@@ -211,7 +227,7 @@ pll pll
 
 reg [6:0] clkdiv_12_5_count;
 always @(posedge clk_1m) begin
-	clkdiv_12_5_count <= clkdiv_12_5_count + 1;
+	clkdiv_12_5_count <= clkdiv_12_5_count + 7'd1;
 	if (clkdiv_12_5_count == 79) begin
 		clk_cpu_fast <= ~clk_cpu_fast;
 		clkdiv_12_5_count <= 0;
@@ -220,7 +236,7 @@ end
 
 reg [6:0] clkdiv_12_count;
 always @(posedge clk_1m) begin
-	clkdiv_12_count <= clkdiv_12_count + 1;
+	clkdiv_12_count <= clkdiv_12_count + 7'd1;
 	if (clkdiv_12_count == 82) begin // should be 82 + 1/3 but yolo
 		clk_12k <= ~clk_12k;
 		clkdiv_12_count <= 0;
@@ -229,7 +245,7 @@ end
 
 reg [7:0] clkdiv_5_count;
 always @(posedge clk_1m) begin
-	clkdiv_5_count <= clkdiv_5_count + 1;
+	clkdiv_5_count <= clkdiv_5_count + 8'd1;
 	if (clkdiv_5_count == 199) begin
 		clk_cpu_slow <= ~clk_cpu_slow;
 		clkdiv_5_count <= 0;

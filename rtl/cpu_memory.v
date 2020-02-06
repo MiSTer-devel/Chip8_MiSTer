@@ -36,7 +36,8 @@ initial begin
 	$readmemh("../rom/font_large.vh", ram, 0, 255);
 	$readmemh("../rom/font_small.vh", ram, 256, 383);
 	$readmemh("../rom/reset.vh", ram, 384);
-	$readmemh("../rom/title.vh", ram, 512);
+//	$readmemh("../rom/title.vh", ram, 512);
+	$readmemh("../rom/logo.vh", ram, 512);
 	
 //	$readmemh("../games/addition.vh", ram, 512);
 //	$readmemh("../games/alien.vh", ram, 512);
