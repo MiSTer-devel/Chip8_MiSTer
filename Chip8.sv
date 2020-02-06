@@ -178,9 +178,9 @@ always @(posedge clk_12k)
 
 wire audio_enable;
 wire audio = audio_enable && &audio_count[4:3];
-assign AUDIO_R = {1'b0,{15{audio}}};
-assign AUDIO_L = {1'b0,{15{audio}}};
-assign AUDIO_S = 1;
+assign AUDIO_R = audio ? 16'h2000: 16'h0000;
+assign AUDIO_L = audio ? 16'h2000: 16'h0000;
+assign AUDIO_S = 0;
 assign AUDIO_MIX = 0;
 
 assign LED_POWER = 0;
