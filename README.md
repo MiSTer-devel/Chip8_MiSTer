@@ -7,15 +7,17 @@ Original core is by Carsten Elton Sørensen.
 
 For an introduction to Chip-8 and SuperChip, please see [the Chip-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8). 
 
-SuperChip has traditionally been implemented as a virtual machine, but this is a pure Verilog implementation of the CPU, display and blitter. The CPU runs at a user selectable speed of a whopping 5 kHz or 12.5 kHz. An instruction usually takes 5 cycles, some a bit longer. The blitter runs at a much faster clock rate than the CPU, 50 MHz on the MiSTer, so sprite and scroll instructions only add a couple of CPU cycles.
+SuperChip has traditionally been implemented as a virtual machine, but this is a pure Verilog implementation of the CPU, display and blitter. The CPU runs at a user selectable speed of a whopping 2.5 kHz or 6.25 kHz. An instruction usually takes 5 cycles, some a bit longer, so that is roughly 500 or 1250 instructions per second. The blitter runs at a much faster clock rate than the CPU, 50 MHz on the MiSTer, so sprite and scroll instructions only add a couple of CPU cycles.
 
 # Instructions #
 
 Press F12 to bring up the OSD. From here you can select a .CH8-file to load.
 
-The Chip-8 screen aspect is 2:1 which doesn't really fit on either a 4:3 or 16:9, you can select the type of screen you're using to view the output and the core will scale the output accordingly.
+The Chip-8 screen is 2:1 with square pixels. On HDMI the picture is just that playfield; Aspect ratio and Scale work as in other MiSTer cores. The analog output is a fixed 15.7 kHz 240p raster with the playfield letterboxed, or 31 kHz with the scandoubler.
 
-The menu also allows the CPU speed to be selected. Some games are better played on slow, some on fast.
+Palette selects the two colours of the picture: White, Amber, Green, Inverted, LCD (the look of earlier releases) or Custom. A custom palette is a 16-byte MiSTer Game Boy .gbp file; its first colour is used for lit dots and its last for the background.
+
+The menu also allows the CPU speed to be selected, at roughly 500 or 1250 instructions per second. Neither models a particular real machine. Some games are better played on the slower setting, some on the faster.
 
 The Chip-8 machine has a hex keypad for input. This has been mapped to the PC keyboard as follows:
 

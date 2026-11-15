@@ -37,7 +37,8 @@ module display(
 	output reg [8:0]	fbuf_addr,
 	input		  [15:0]	fbuf_data,
 	
-	output	outside_playfield
+	output	outside_playfield,
+	output	lit	// a lit dot inside the playfield
 );
 
 wire[7:0] display_pixel_width = hires ? 8'd128 : 8'd64;
@@ -123,5 +124,7 @@ assign {red, green, blue} =
 	color == 2 ? {3'd6, 3'd6, 2'd1} :
 	{3'd3, 3'd3, 2'd1};
 
+assign lit = inside_playfield && enable_pixel && pixel;
 
 endmodule
+

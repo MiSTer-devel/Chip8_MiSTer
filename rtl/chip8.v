@@ -33,6 +33,11 @@ module chip8(
 	output [2:0]	vga_green,
 	output [2:1]	vga_blue,
 	output			vga_de,
+
+	// 1-bit video: lit dot, plus blanking that frames the playfield
+	output			vga_pixel,
+	output			vga_hblank,
+	output			vga_vblank,
 	
 	output [15:0]	cpu_opcode,
 	
@@ -168,6 +173,8 @@ vga_block Vga(
 	.vsync (vga_vsync),
 	.beam_outside (vga_beam_outside),
 	.display_enable(vga_de),
+	.hblank (vga_hblank),
+	.pixel_on (vga_pixel),
 	
 	.red   (vga_red), 
 	.green (vga_green),
@@ -177,6 +184,8 @@ vga_block Vga(
 	.fbuf_data (vga_fbuf_data)
 );
 
+
+assign vga_vblank = vga_beam_outside;
 
 blitter Blitter(
 	.clk(blit_clk),
@@ -210,7 +219,10 @@ cpu CPU(
 	.vsync_in(vga_beam_outside),
 	.halt(cpu_halt || uploading),
 	
-	.keyMatrix(keyboard_matrix),
+	// Keys are masked while uploading: a key edge releases a halted CPU
+	// for one instruction (the singlestep hack), which must not happen
+	// while the RAM port belongs to the uploader.
+	.keyMatrix(uploading ? 16'd0 : keyboard_matrix),
 	
 	.ram_en(cpu_en),
 	.ram_wr(cpu_wr),

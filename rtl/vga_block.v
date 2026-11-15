@@ -35,7 +35,12 @@ module vga_block(
 	
 	// Framebuffer
 	output [8:0]	fbuf_addr,
-	input  [15:0]	fbuf_data
+	input  [15:0]	fbuf_data,
+
+	// 1-bit video for an external palette. The blanking frames the
+	// playfield only, not the whole raster.
+	output			hblank,
+	output			pixel_on
 );
 
 
@@ -106,6 +111,8 @@ vga_sync SyncGenerator(
 wire[10:0] disp_pixel_x = ntsc ? pixel_x - (704 - 640) / 2 : pixel_x;
 wire disp_display_enable = display_enable & (disp_pixel_x < 640);
 
+assign hblank = !(pixel_x < (ntsc ? hDisp_NTSC : hDisp_VGA) && disp_pixel_x < 640);
+
 display Display(
 	.clk (clk),
 	.res (res),
@@ -128,7 +135,8 @@ display Display(
 	.fbuf_addr (fbuf_addr),
 	.fbuf_data (fbuf_data),
 	
-	.outside_playfield (beam_outside)
+	.outside_playfield (beam_outside),
+	.lit (pixel_on)
 );
 
 endmodule
