@@ -24,14 +24,14 @@ module  pll_0002(
 		.fractional_vco_multiplier("true"),
 		.reference_clock_frequency("50.0 MHz"),
 		.operation_mode("direct"),
-		.number_of_clocks(3),
-		.output_clock_frequency0("13.500000 MHz"),
+		.number_of_clocks(1),
+		.output_clock_frequency0("14.085120 MHz"),
 		.phase_shift0("0 ps"),
 		.duty_cycle0(50),
-		.output_clock_frequency1("1.000000 MHz"),
+		.output_clock_frequency1("0 MHz"),
 		.phase_shift1("0 ps"),
 		.duty_cycle1(50),
-		.output_clock_frequency2("54.000000 MHz"),
+		.output_clock_frequency2("0 MHz"),
 		.phase_shift2("0 ps"),
 		.duty_cycle2(50),
 		.output_clock_frequency3("0 MHz"),
@@ -83,11 +83,13 @@ module  pll_0002(
 		.pll_subtype("General")
 	) altera_pll_i (
 		.rst	(rst),
-		.outclk	({outclk_2, outclk_1, outclk_0}),
+		.outclk	({outclk_0}),
 		.locked	(locked),
 		.fboutclk	( ),
 		.fbclk	(1'b0),
 		.refclk	(refclk)
 	);
+	assign outclk_1 = 1'b0;
+	assign outclk_2 = 1'b0;
 endmodule
 

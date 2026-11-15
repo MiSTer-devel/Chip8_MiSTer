@@ -43,7 +43,8 @@ module display(
 
 wire[7:0] display_pixel_width = hires ? 8'd128 : 8'd64;
 
-wire[3:0] h_pixel_mult = hires ? 4'd5 : 4'd10;
+// NTSC: 8 clocks per lores pixel, one CDP1861 dot at 14.08512 MHz
+wire[3:0] h_pixel_mult = ntsc ? (hires ? 4'd4 : 4'd8) : (hires ? 4'd5 : 4'd10);
 wire[3:0] v_pixel_mult_VGA = wide ? (hires ? 4'd6 : 4'd12) : h_pixel_mult;
 wire[3:0] v_pixel_mult_NTSC = wide ? (hires ? 4'd3 : 4'd6) : (hires ? 4'd2 : 4'd4);
 wire[3:0] v_pixel_mult = ntsc ? v_pixel_mult_NTSC : v_pixel_mult_VGA;

@@ -13,7 +13,7 @@ SuperChip has traditionally been implemented as a virtual machine, but this is a
 
 Press F12 to bring up the OSD. From here you can select a .CH8-file to load.
 
-The Chip-8 screen is 2:1 with square pixels. On HDMI the picture is just that playfield; Aspect ratio and Scale work as in other MiSTer cores. The analog output is a fixed 15.7 kHz 240p raster with the playfield letterboxed, or 31 kHz with the scandoubler.
+The picture has the shape it had on a COSMAC VIP, the machine CHIP-8 was written for: the analog output is the VIP's own raster (one lores pixel is one CDP1861 dot, a fixed 15.7 kHz 240p frame of 262 lines, or 31 kHz with the scandoubler), and Original on HDMI is the same shape, about 1.74:1 (1703:980), matching the COSMAC VIP core. Pixels are slightly taller than wide, as on the real machine. Aspect ratio and Scale otherwise work as in other MiSTer cores.
 
 Palette selects the two colours of the picture: White, Amber, Green, Inverted, LCD (the look of earlier releases) or Custom. A custom palette is a 16-byte MiSTer Game Boy .gbp file; its first colour is used for lit dots and its last for the background.
 

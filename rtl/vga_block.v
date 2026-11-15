@@ -56,17 +56,20 @@ wire [10:0] vSyncStart_VGA = 491;
 wire [10:0] vSyncEnd_VGA   = 493;
 wire [10:0] vEnd_VGA       = 524 - 1;
 	
-// NTSC configuration 240p (704x240)
+// NTSC configuration 240p: the COSMAC VIP raster. At 14.08512 MHz one
+// CDP1861 dot (1.76064 MHz) is 8 clocks, a 112-dot line is 896 clocks and the
+// frame is 262 lines, so a lores CHIP-8 pixel is exactly a VIP dot and the
+// playfield (64 dots x 128 lines) has the VIP's shape on a CRT.
 
-wire [10:0] hDisp_NTSC      = 704;
-wire [10:0] hSyncStart_NTSC = 728;
-wire [10:0] hSyncEnd_NTSC   = 791;
-wire [10:0] hEnd_NTSC       = 858 - 1;
+wire [10:0] hDisp_NTSC      = 768;
+wire [10:0] hSyncStart_NTSC = 784;
+wire [10:0] hSyncEnd_NTSC   = 848;
+wire [10:0] hEnd_NTSC       = 896 - 1;
 
 wire [10:0] vDisp_NTSC      = 480 / 2;
 wire [10:0] vSyncStart_NTSC = 486 / 2;
 wire [10:0] vSyncEnd_NTSC   = 496 / 2;
-wire [10:0] vEnd_NTSC       = 526 / 2 - 1;
+wire [10:0] vEnd_NTSC       = 262 - 1;
 
 
 // positive sync signals from sync generator
@@ -108,10 +111,11 @@ vga_sync SyncGenerator(
 
 // Display generator
 
-wire[10:0] disp_pixel_x = ntsc ? pixel_x - (704 - 640) / 2 : pixel_x;
-wire disp_display_enable = display_enable & (disp_pixel_x < 640);
+wire[10:0] pf_width = ntsc ? 11'd512 : 11'd640;
+wire[10:0] disp_pixel_x = ntsc ? pixel_x - (768 - 512) / 2 : pixel_x;
+wire disp_display_enable = display_enable & (disp_pixel_x < pf_width);
 
-assign hblank = !(pixel_x < (ntsc ? hDisp_NTSC : hDisp_VGA) && disp_pixel_x < 640);
+assign hblank = !(pixel_x < (ntsc ? hDisp_NTSC : hDisp_VGA) && disp_pixel_x < pf_width);
 
 display Display(
 	.clk (clk),

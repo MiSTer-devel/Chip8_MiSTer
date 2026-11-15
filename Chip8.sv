@@ -278,8 +278,7 @@ assign {UART_RTS, UART_TXD, UART_DTR} = 0;
 
 wire clk_sys; // 50MHz
 wire clk_cpu_fast, clk_cpu_slow; // 6.25KHz or 2.5KHz
-wire clk_video; // 13.5MHz, clocks the core's display logic
-wire clk_video_x4; // 54MHz, CLK_VIDEO: gives the scandoubler its 4x headroom
+wire clk_video; // 14.08512MHz = 8x the VIP's 1861 dot clock; also CLK_VIDEO
 wire clk_12k; // 6 KHz, despite the name
 wire clk_1m; // 1MHz, for dividing into the required smaller amounts
 wire locked;
@@ -290,10 +289,21 @@ pll pll
 (
 	.refclk(CLK_50M),
 	.outclk_0(clk_video),
-	.outclk_1(clk_1m),
-	.outclk_2(clk_video_x4),
 	.locked(locked)
 );
+
+// The PLL VCO is set by the VIP video clock and has no 1 MHz multiple, so the
+// 1 MHz divider source comes from the 50 MHz input instead.
+reg [4:0] clkdiv_1m_count = 0;
+reg       clk_1m_r = 0;
+always @(posedge CLK_50M) begin
+	clkdiv_1m_count <= clkdiv_1m_count + 5'd1;
+	if (clkdiv_1m_count == 24) begin
+		clk_1m_r <= ~clk_1m_r;
+		clkdiv_1m_count <= 0;
+	end
+end
+assign clk_1m = clk_1m_r;
 
 reg [6:0] clkdiv_12_5_count;
 always @(posedge clk_1m) begin
@@ -323,7 +333,7 @@ always @(posedge clk_1m) begin
 end
 
 assign clk_sys = CLK_50M;
-assign CLK_VIDEO = clk_video_x4;
+assign CLK_VIDEO = clk_video;
 assign cpu_clk = status[2] ? clk_cpu_slow : clk_cpu_fast;
 
 // Reset circuit
@@ -429,24 +439,26 @@ always @(*) begin
 	endcase
 end
 
-// The display logic runs on clk_video, a quarter of CLK_VIDEO and from the
-// same PLL. A flag toggling on clk_video marks each new pixel; that gives one
-// ce_pix per pixel on CLK_VIDEO.
+// The display logic runs on CLK_VIDEO itself, 8 clocks per VIP dot. As on
+// the VIP core, ce_pix samples every 2nd clock (4 samples per dot, 448 per
+// line, a 256-sample playfield) and every 4th clock for the scandoubler. Dot,
+// blanking and sync edges all fall on multiples of 4 clocks with no pipeline
+// lag between them, so the free-running phase needs no alignment.
 
-reg pix_toggle = 0;
-always @(posedge clk_video)
-	pix_toggle <= ~pix_toggle;
+wire scandoubler = scale || forced_scandoubler;
 
-reg        pix_toggle_d = 0;
+reg  [1:0] ce_cnt = 0;
 reg        ce_pix = 0;
 reg        vid_hs, vid_vs, vid_hblank, vid_vblank;
 reg [23:0] vid_rgb;
 
-always @(posedge CLK_VIDEO) begin
-	pix_toggle_d <= pix_toggle;
-	ce_pix <= pix_toggle ^ pix_toggle_d;
+wire ce_next = scandoubler ? (ce_cnt == 2'd3) : ce_cnt[0];
 
-	if (pix_toggle ^ pix_toggle_d) begin
+always @(posedge CLK_VIDEO) begin
+	ce_cnt <= ce_cnt + 2'd1;
+	ce_pix <= ce_next;
+
+	if (ce_next) begin
 		vid_hs <= ~core_hs;
 		vid_vs <= ~core_vs;
 		vid_hblank <= core_hblank;
@@ -455,10 +467,9 @@ always @(posedge CLK_VIDEO) begin
 	end
 end
 
-wire scandoubler = scale || forced_scandoubler;
 wire vga_de;
 
-video_mixer #(.LINE_LENGTH(640), .GAMMA(1)) video_mixer
+video_mixer #(.LINE_LENGTH(256), .GAMMA(1)) video_mixer
 (
 	.CLK_VIDEO(CLK_VIDEO),
 	.CE_PIXEL(CE_PIXEL),
@@ -483,7 +494,10 @@ video_mixer #(.LINE_LENGTH(640), .GAMMA(1)) video_mixer
 	.VGA_DE(vga_de)
 );
 
-// The picture is the 2:1 playfield with square pixels, as on the HP48 LCD.
+// Original is the playfield's shape on a COSMAC VIP, the machine CHIP-8 was
+// written for: 64 dots of 390/112 square pixels each (NTSC, 240 lines) by 128
+// lines of 262.5/262, which gives 1703:980 (about 1.74:1). This matches the
+// border-hidden Original of the COSMAC VIP core.
 
 wire [1:0] ar = status[122:121];
 
@@ -498,8 +512,8 @@ video_freak video_freak
 	.VIDEO_ARX(VIDEO_ARX),
 	.VIDEO_ARY(VIDEO_ARY),
 	.VGA_DE_IN(vga_de),
-	.ARX((!ar) ? 12'd2 : (ar - 1'd1)),
-	.ARY((!ar) ? 12'd1 : 12'd0),
+	.ARX((!ar) ? 12'd1703 : (ar - 1'd1)),
+	.ARY((!ar) ? 12'd980  : 12'd0),
 	.CROP_SIZE(12'd0),
 	.CROP_OFF(5'd0),
 	.SCALE(status[6:5])

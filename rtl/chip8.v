@@ -18,7 +18,7 @@
 module chip8(
 	input				res,
 	
-	input				disp_clk,	 // 13.500.000 or 25.152.000 Hz clock
+	input				disp_clk,	 // 14.085.120 Hz (NTSC) or 25.152.000 Hz (VGA)
 	input				cpu_clk,	 // 20.000 Hz clock
 	input				blit_clk, // 100.000.000 Hz clock, or as fast as it can get.
 	
