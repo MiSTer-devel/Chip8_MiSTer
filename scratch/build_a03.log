@@ -1,0 +1,1791 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Sun Nov 15 18:39:53 2026
+Info: Command: quartus_sh --flow compile Chip8
+Info: Quartus(args): compile Chip8
+Info: Project Name = C:/Workspace/Git/Chip8_MiSTer/Chip8
+Info: Revision Name = Chip8
+Info (293032): Detected changes in source files.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv has changed.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v has changed.
+    Info (293033): A new file was added to the project: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8_joystick.sv.
+Info (293032): Detected changes in source files.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv has changed.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v has changed.
+    Info (293033): A new file was added to the project: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8_joystick.sv.
+Info (293032): Detected changes in source files.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv has changed.
+    Info (293027): Source file: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v has changed.
+    Info (293033): A new file was added to the project: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8_joystick.sv.
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 18:39:55 2026
+Info: Command: quartus_sh -t sys/build_id.tcl compile Chip8 Chip8
+Info: Quartus(args): compile Chip8 Chip8
+Info (23030): Evaluation of Tcl script sys/build_id.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4769 megabytes
+    Info: Processing ended: Sun Nov 15 18:39:55 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 18:39:56 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Chip8 -c Chip8
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+    Info (16304): Mode behavior is affected by advanced setting Placement Effort Multiplier (default for this mode is 4.0)
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/pll.v
+    Info (12023): Found entity 1: pll File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/pll/pll_0002.v
+    Info (12023): Found entity 1: pll_0002 File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll/pll_0002.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_hdmi.v
+    Info (12023): Found entity 1: pll_hdmi File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_hdmi/pll_hdmi_0002.v
+    Info (12023): Found entity 1: pll_hdmi_0002 File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi/pll_hdmi_0002.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_audio.v
+    Info (12023): Found entity 1: pll_audio File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_audio/pll_audio_0002.v
+    Info (12023): Found entity 1: pll_audio_0002 File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio/pll_audio_0002.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_cfg/pll_cfg.v
+    Info (12023): Found entity 1: pll_cfg File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_cfg/pll_cfg_hdmi.v
+    Info (12023): Found entity 1: pll_cfg_hdmi File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file sys/pll_cfg/altera_pll_reconfig_top.v
+    Info (12023): Found entity 1: altera_pll_reconfig_top File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_top.v Line: 16
+Info (12021): Found 6 design units, including 6 entities, in source file sys/pll_cfg/altera_pll_reconfig_core.v
+    Info (12023): Found entity 1: altera_pll_reconfig_core File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 16
+    Info (12023): Found entity 2: self_reset File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 1691
+    Info (12023): Found entity 3: dprio_mux File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 1739
+    Info (12023): Found entity 4: fpll_dprio_init File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 1789
+    Info (12023): Found entity 5: dyn_phase_shift File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 1884
+    Info (12023): Found entity 6: generic_lcell_comb File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2112
+Info (12021): Found 3 design units, including 3 entities, in source file sys/sys_top.v
+    Info (12023): Found entity 1: sys_top File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 22
+    Info (12023): Found entity 2: sync_fix File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1870
+    Info (12023): Found entity 3: csync File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1902
+Info (12021): Found 2 design units, including 1 entities, in source file sys/ascal.vhd
+    Info (12022): Found design unit 1: ascal-rtl File: C:/Workspace/Git/Chip8_MiSTer/sys/ascal.vhd Line: 269
+    Info (12023): Found entity 1: ascal File: C:/Workspace/Git/Chip8_MiSTer/sys/ascal.vhd Line: 114
+Info (12021): Found 2 design units, including 1 entities, in source file sys/pll_hdmi_adj.vhd
+    Info (12022): Found design unit 1: pll_hdmi_adj-rtl File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi_adj.vhd Line: 53
+    Info (12023): Found entity 1: pll_hdmi_adj File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi_adj.vhd Line: 21
+Info (12021): Found 3 design units, including 3 entities, in source file sys/math.sv
+    Info (12023): Found entity 1: sys_udiv File: C:/Workspace/Git/Chip8_MiSTer/sys/math.sv Line: 3
+    Info (12023): Found entity 2: sys_umul File: C:/Workspace/Git/Chip8_MiSTer/sys/math.sv Line: 46
+    Info (12023): Found entity 3: sys_umuldiv File: C:/Workspace/Git/Chip8_MiSTer/sys/math.sv Line: 85
+Info (12021): Found 5 design units, including 5 entities, in source file sys/hq2x.sv
+    Info (12023): Found entity 1: Hq2x File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 13
+    Info (12023): Found entity 2: hq2x_in File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 226
+    Info (12023): Found entity 3: hq2x_buf File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 250
+    Info (12023): Found entity 4: DiffCheck File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 271
+    Info (12023): Found entity 5: Blend File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 298
+Info (12021): Found 1 design units, including 1 entities, in source file sys/scandoubler.v
+    Info (12023): Found entity 1: scandoubler File: C:/Workspace/Git/Chip8_MiSTer/sys/scandoubler.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file sys/scanlines.v
+    Info (12023): Found entity 1: scanlines File: C:/Workspace/Git/Chip8_MiSTer/sys/scanlines.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sys/shadowmask.sv
+    Info (12023): Found entity 1: shadowmask File: C:/Workspace/Git/Chip8_MiSTer/sys/shadowmask.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file sys/video_cleaner.sv
+    Info (12023): Found entity 1: video_cleaner File: C:/Workspace/Git/Chip8_MiSTer/sys/video_cleaner.sv Line: 12
+    Info (12023): Found entity 2: s_fix File: C:/Workspace/Git/Chip8_MiSTer/sys/video_cleaner.sv Line: 81
+Info (12021): Found 2 design units, including 2 entities, in source file sys/gamma_corr.sv
+    Info (12023): Found entity 1: gamma_corr File: C:/Workspace/Git/Chip8_MiSTer/sys/gamma_corr.sv Line: 1
+    Info (12023): Found entity 2: gamma_fast File: C:/Workspace/Git/Chip8_MiSTer/sys/gamma_corr.sv Line: 62
+Info (12021): Found 1 design units, including 1 entities, in source file sys/video_mixer.sv
+    Info (12023): Found entity 1: video_mixer File: C:/Workspace/Git/Chip8_MiSTer/sys/video_mixer.sv Line: 19
+Info (12021): Found 2 design units, including 2 entities, in source file sys/video_freak.sv
+    Info (12023): Found entity 1: video_freak File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freak.sv Line: 16
+    Info (12023): Found entity 2: video_scale_int File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freak.sv Line: 141
+Info (12021): Found 2 design units, including 2 entities, in source file sys/video_freezer.sv
+    Info (12023): Found entity 1: video_freezer File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freezer.sv Line: 21
+    Info (12023): Found entity 2: sync_lock File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freezer.sv Line: 80
+Info (12021): Found 2 design units, including 2 entities, in source file sys/arcade_video.v
+    Info (12023): Found entity 1: arcade_video File: C:/Workspace/Git/Chip8_MiSTer/sys/arcade_video.v Line: 29
+    Info (12023): Found entity 2: screen_rotate File: C:/Workspace/Git/Chip8_MiSTer/sys/arcade_video.v Line: 168
+Info (12021): Found 1 design units, including 1 entities, in source file sys/osd.v
+    Info (12023): Found entity 1: osd File: C:/Workspace/Git/Chip8_MiSTer/sys/osd.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sys/vga_out.sv
+    Info (12023): Found entity 1: vga_out File: C:/Workspace/Git/Chip8_MiSTer/sys/vga_out.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/yc_out.sv
+    Info (12023): Found entity 1: yc_out File: C:/Workspace/Git/Chip8_MiSTer/sys/yc_out.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file sys/i2c.v
+    Info (12023): Found entity 1: i2c File: C:/Workspace/Git/Chip8_MiSTer/sys/i2c.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/alsa.sv
+    Info (12023): Found entity 1: alsa File: C:/Workspace/Git/Chip8_MiSTer/sys/alsa.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file sys/i2s.v
+    Info (12023): Found entity 1: i2s File: C:/Workspace/Git/Chip8_MiSTer/sys/i2s.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sys/spdif.v
+    Info (12023): Found entity 1: spdif File: C:/Workspace/Git/Chip8_MiSTer/sys/spdif.v Line: 33
+Info (12021): Found 2 design units, including 2 entities, in source file sys/audio_out.v
+    Info (12023): Found entity 1: audio_out File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 2
+    Info (12023): Found entity 2: aud_mix_top File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 258
+Info (12021): Found 3 design units, including 3 entities, in source file sys/iir_filter.v
+    Info (12023): Found entity 1: IIR_filter File: C:/Workspace/Git/Chip8_MiSTer/sys/iir_filter.v Line: 22
+    Info (12023): Found entity 2: iir_filter_tap File: C:/Workspace/Git/Chip8_MiSTer/sys/iir_filter.v Line: 148
+    Info (12023): Found entity 3: DC_blocker File: C:/Workspace/Git/Chip8_MiSTer/sys/iir_filter.v Line: 189
+Info (12021): Found 2 design units, including 2 entities, in source file sys/ltc2308.sv
+    Info (12023): Found entity 1: ltc2308 File: C:/Workspace/Git/Chip8_MiSTer/sys/ltc2308.sv Line: 28
+    Info (12023): Found entity 2: ltc2308_tape File: C:/Workspace/Git/Chip8_MiSTer/sys/ltc2308.sv Line: 105
+Info (12021): Found 1 design units, including 1 entities, in source file sys/sigma_delta_dac.v
+    Info (12023): Found entity 1: sigma_delta_dac File: C:/Workspace/Git/Chip8_MiSTer/sys/sigma_delta_dac.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file sys/mt32pi.sv
+    Info (12023): Found entity 1: mt32pi File: C:/Workspace/Git/Chip8_MiSTer/sys/mt32pi.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file sys/mcp23009.sv
+    Info (12023): Found entity 1: mcp23009 File: C:/Workspace/Git/Chip8_MiSTer/sys/mcp23009.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file sys/f2sdram_safe_terminator.sv
+    Info (12023): Found entity 1: f2sdram_safe_terminator File: C:/Workspace/Git/Chip8_MiSTer/sys/f2sdram_safe_terminator.sv Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file sys/ddr_svc.sv
+    Info (12023): Found entity 1: ddr_svc File: C:/Workspace/Git/Chip8_MiSTer/sys/ddr_svc.sv Line: 23
+Info (12021): Found 2 design units, including 2 entities, in source file sys/sysmem.sv
+    Info (12023): Found entity 1: sysmem_lite File: C:/Workspace/Git/Chip8_MiSTer/sys/sysmem.sv Line: 2
+    Info (12023): Found entity 2: sysmem_HPS_fpga_interfaces File: C:/Workspace/Git/Chip8_MiSTer/sys/sysmem.sv Line: 241
+Info (12021): Found 1 design units, including 1 entities, in source file sys/sd_card.sv
+    Info (12023): Found entity 1: sd_card File: C:/Workspace/Git/Chip8_MiSTer/sys/sd_card.sv Line: 28
+Info (12021): Found 4 design units, including 4 entities, in source file sys/hps_io.sv
+    Info (12023): Found entity 1: hps_io File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 30
+    Info (12023): Found entity 2: ps2_device File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 716
+    Info (12023): Found entity 3: video_calc File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 859
+    Info (12023): Found entity 4: confstr_rom File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 1027
+Info (12021): Found 1 design units, including 1 entities, in source file chip8.sv
+    Info (12023): Found entity 1: emu File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/bit_shifter.v
+    Info (12023): Found entity 1: bit_shifter File: C:/Workspace/Git/Chip8_MiSTer/rtl/bit_shifter.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/blitter.v
+    Info (12023): Found entity 1: blitter File: C:/Workspace/Git/Chip8_MiSTer/rtl/blitter.v Line: 20
+Info (12021): Found 0 design units, including 0 entities, in source file rtl/blitter.vh
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/chip8.v
+    Info (12023): Found entity 1: chip8 File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/chip8_joystick.sv
+    Info (12023): Found entity 1: chip8_joystick File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8_joystick.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cpu_memory.v
+    Info (12023): Found entity 1: cpu_memory File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu_memory.v Line: 19
+Info (12021): Found 2 design units, including 2 entities, in source file rtl/cpu.v
+    Info (12023): Found entity 1: CpuRegisters File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 22
+    Info (12023): Found entity 2: cpu File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/display.v
+    Info (12023): Found entity 1: display File: C:/Workspace/Git/Chip8_MiSTer/rtl/display.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/framebuffer.v
+    Info (12023): Found entity 1: framebuffer File: C:/Workspace/Git/Chip8_MiSTer/rtl/framebuffer.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/main.v
+    Info (12023): Found entity 1: nexys3_top File: C:/Workspace/Git/Chip8_MiSTer/rtl/main.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga_block.v
+    Info (12023): Found entity 1: vga_block File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/bcd.v
+    Info (12023): Found entity 1: bcd File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/bcd.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/clk_divider.v
+    Info (12023): Found entity 1: clk_divider File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/clk_divider.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/debounce.v
+    Info (12023): Found entity 1: debounce File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/debounce.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/edge.v
+    Info (12023): Found entity 1: edge_detect File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/edge.v Line: 18
+Info (12021): Found 5 design units, including 5 entities, in source file rtl/util/misc.v
+    Info (12023): Found entity 1: util_dff File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 18
+    Info (12023): Found entity 2: util_sync_domain File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 35
+    Info (12023): Found entity 3: util_delay File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 51
+    Info (12023): Found entity 4: util_posedge File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 70
+    Info (12023): Found entity 5: util_negedge File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 86
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/ps2in.v
+    Info (12023): Found entity 1: ps2in File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/ps2in.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/rng.v
+    Info (12023): Found entity 1: rng File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/rng.v Line: 62
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/util/vga_sync.v
+    Info (12023): Found entity 1: vga_sync File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/vga_sync.v Line: 30
+Info (12127): Elaborating entity "sys_top" for the top level hierarchy
+Info (12128): Elaborating entity "mcp23009" for hierarchy "mcp23009:mcp23009" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 175
+Info (12128): Elaborating entity "i2c" for hierarchy "mcp23009:mcp23009|i2c:i2c" File: C:/Workspace/Git/Chip8_MiSTer/sys/mcp23009.sv Line: 41
+Info (12128): Elaborating entity "sysmem_lite" for hierarchy "sysmem_lite:sysmem" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 638
+Info (12128): Elaborating entity "f2sdram_safe_terminator" for hierarchy "sysmem_lite:sysmem|f2sdram_safe_terminator:f2sdram_safe_terminator_ram1" File: C:/Workspace/Git/Chip8_MiSTer/sys/sysmem.sv Line: 91
+Info (12128): Elaborating entity "f2sdram_safe_terminator" for hierarchy "sysmem_lite:sysmem|f2sdram_safe_terminator:f2sdram_safe_terminator_vbuf" File: C:/Workspace/Git/Chip8_MiSTer/sys/sysmem.sv Line: 183
+Info (12128): Elaborating entity "sysmem_HPS_fpga_interfaces" for hierarchy "sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces" File: C:/Workspace/Git/Chip8_MiSTer/sys/sysmem.sv Line: 223
+Info (12128): Elaborating entity "ddr_svc" for hierarchy "ddr_svc:ddr_svc" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 679
+Info (12128): Elaborating entity "ascal" for hierarchy "ascal:ascal" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 815
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ascal:ascal|altsyncram:i_mem[0].r[7]__1"
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:i_mem[0].r[7]__1"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:i_mem[0].r[7]__1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_89q1.tdf
+    Info (12023): Found entity 1: altsyncram_89q1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_89q1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_89q1" for hierarchy "ascal:ascal|altsyncram:i_mem[0].r[7]__1|altsyncram_89q1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ascal:ascal|altsyncram:o_line0[0].r[7]__2"
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_line0[0].r[7]__2"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:o_line0[0].r[7]__2" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ccn1.tdf
+    Info (12023): Found entity 1: altsyncram_ccn1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_ccn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ccn1" for hierarchy "ascal:ascal|altsyncram:o_line0[0].r[7]__2|altsyncram_ccn1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ascal:ascal|altsyncram:o_linf0[0].r[7]__6"
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_linf0[0].r[7]__6"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:o_linf0[0].r[7]__6" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m6n1.tdf
+    Info (12023): Found entity 1: altsyncram_m6n1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_m6n1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_m6n1" for hierarchy "ascal:ascal|altsyncram:o_linf0[0].r[7]__6|altsyncram_m6n1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "sys_umuldiv" for hierarchy "sys_umuldiv:ar_muldiv" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 875
+Info (12128): Elaborating entity "sys_umul" for hierarchy "sys_umuldiv:ar_muldiv|sys_umul:umul" File: C:/Workspace/Git/Chip8_MiSTer/sys/math.sv Line: 105
+Info (12128): Elaborating entity "sys_udiv" for hierarchy "sys_umuldiv:ar_muldiv|sys_udiv:udiv" File: C:/Workspace/Git/Chip8_MiSTer/sys/math.sv Line: 107
+Info (12128): Elaborating entity "pll_hdmi_adj" for hierarchy "pll_hdmi_adj:pll_hdmi_adj" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1000
+Info (12128): Elaborating entity "pll_hdmi" for hierarchy "pll_hdmi:pll_hdmi" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1034
+Info (12128): Elaborating entity "pll_hdmi_0002" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi.v Line: 23
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi/pll_hdmi_0002.v Line: 239
+Warning (10034): Output port "lvds_clk" at altera_pll.v(320) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 320
+Warning (10034): Output port "loaden" at altera_pll.v(321) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 321
+Warning (10034): Output port "extclk_out" at altera_pll.v(322) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 322
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi/pll_hdmi_0002.v Line: 239
+Info (12133): Instantiated megafunction "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_hdmi/pll_hdmi_0002.v Line: 239
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "pll_fractional_cout" = "32"
+    Info (12134): Parameter "pll_dsm_out_sel" = "1st_order"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "148.500000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "Cyclone V"
+    Info (12134): Parameter "pll_subtype" = "Reconfigurable"
+    Info (12134): Parameter "m_cnt_hi_div" = "4"
+    Info (12134): Parameter "m_cnt_lo_div" = "4"
+    Info (12134): Parameter "n_cnt_hi_div" = "256"
+    Info (12134): Parameter "n_cnt_lo_div" = "256"
+    Info (12134): Parameter "m_cnt_bypass_en" = "false"
+    Info (12134): Parameter "n_cnt_bypass_en" = "true"
+    Info (12134): Parameter "m_cnt_odd_div_duty_en" = "false"
+    Info (12134): Parameter "n_cnt_odd_div_duty_en" = "false"
+    Info (12134): Parameter "c_cnt_hi_div0" = "2"
+    Info (12134): Parameter "c_cnt_lo_div0" = "1"
+    Info (12134): Parameter "c_cnt_prst0" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst0" = "0"
+    Info (12134): Parameter "c_cnt_in_src0" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en0" = "false"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en0" = "true"
+    Info (12134): Parameter "c_cnt_hi_div1" = "1"
+    Info (12134): Parameter "c_cnt_lo_div1" = "1"
+    Info (12134): Parameter "c_cnt_prst1" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst1" = "0"
+    Info (12134): Parameter "c_cnt_in_src1" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en1" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en1" = "false"
+    Info (12134): Parameter "c_cnt_hi_div2" = "1"
+    Info (12134): Parameter "c_cnt_lo_div2" = "1"
+    Info (12134): Parameter "c_cnt_prst2" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst2" = "0"
+    Info (12134): Parameter "c_cnt_in_src2" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en2" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en2" = "false"
+    Info (12134): Parameter "c_cnt_hi_div3" = "1"
+    Info (12134): Parameter "c_cnt_lo_div3" = "1"
+    Info (12134): Parameter "c_cnt_prst3" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst3" = "0"
+    Info (12134): Parameter "c_cnt_in_src3" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en3" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en3" = "false"
+    Info (12134): Parameter "c_cnt_hi_div4" = "1"
+    Info (12134): Parameter "c_cnt_lo_div4" = "1"
+    Info (12134): Parameter "c_cnt_prst4" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst4" = "0"
+    Info (12134): Parameter "c_cnt_in_src4" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en4" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en4" = "false"
+    Info (12134): Parameter "c_cnt_hi_div5" = "1"
+    Info (12134): Parameter "c_cnt_lo_div5" = "1"
+    Info (12134): Parameter "c_cnt_prst5" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst5" = "0"
+    Info (12134): Parameter "c_cnt_in_src5" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en5" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en5" = "false"
+    Info (12134): Parameter "c_cnt_hi_div6" = "1"
+    Info (12134): Parameter "c_cnt_lo_div6" = "1"
+    Info (12134): Parameter "c_cnt_prst6" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst6" = "0"
+    Info (12134): Parameter "c_cnt_in_src6" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en6" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en6" = "false"
+    Info (12134): Parameter "c_cnt_hi_div7" = "1"
+    Info (12134): Parameter "c_cnt_lo_div7" = "1"
+    Info (12134): Parameter "c_cnt_prst7" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst7" = "0"
+    Info (12134): Parameter "c_cnt_in_src7" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en7" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en7" = "false"
+    Info (12134): Parameter "c_cnt_hi_div8" = "1"
+    Info (12134): Parameter "c_cnt_lo_div8" = "1"
+    Info (12134): Parameter "c_cnt_prst8" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst8" = "0"
+    Info (12134): Parameter "c_cnt_in_src8" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en8" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en8" = "false"
+    Info (12134): Parameter "c_cnt_hi_div9" = "1"
+    Info (12134): Parameter "c_cnt_lo_div9" = "1"
+    Info (12134): Parameter "c_cnt_prst9" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst9" = "0"
+    Info (12134): Parameter "c_cnt_in_src9" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en9" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en9" = "false"
+    Info (12134): Parameter "c_cnt_hi_div10" = "1"
+    Info (12134): Parameter "c_cnt_lo_div10" = "1"
+    Info (12134): Parameter "c_cnt_prst10" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst10" = "0"
+    Info (12134): Parameter "c_cnt_in_src10" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en10" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en10" = "false"
+    Info (12134): Parameter "c_cnt_hi_div11" = "1"
+    Info (12134): Parameter "c_cnt_lo_div11" = "1"
+    Info (12134): Parameter "c_cnt_prst11" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst11" = "0"
+    Info (12134): Parameter "c_cnt_in_src11" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en11" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en11" = "false"
+    Info (12134): Parameter "c_cnt_hi_div12" = "1"
+    Info (12134): Parameter "c_cnt_lo_div12" = "1"
+    Info (12134): Parameter "c_cnt_prst12" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst12" = "0"
+    Info (12134): Parameter "c_cnt_in_src12" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en12" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en12" = "false"
+    Info (12134): Parameter "c_cnt_hi_div13" = "1"
+    Info (12134): Parameter "c_cnt_lo_div13" = "1"
+    Info (12134): Parameter "c_cnt_prst13" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst13" = "0"
+    Info (12134): Parameter "c_cnt_in_src13" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en13" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en13" = "false"
+    Info (12134): Parameter "c_cnt_hi_div14" = "1"
+    Info (12134): Parameter "c_cnt_lo_div14" = "1"
+    Info (12134): Parameter "c_cnt_prst14" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst14" = "0"
+    Info (12134): Parameter "c_cnt_in_src14" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en14" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en14" = "false"
+    Info (12134): Parameter "c_cnt_hi_div15" = "1"
+    Info (12134): Parameter "c_cnt_lo_div15" = "1"
+    Info (12134): Parameter "c_cnt_prst15" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst15" = "0"
+    Info (12134): Parameter "c_cnt_in_src15" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en15" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en15" = "false"
+    Info (12134): Parameter "c_cnt_hi_div16" = "1"
+    Info (12134): Parameter "c_cnt_lo_div16" = "1"
+    Info (12134): Parameter "c_cnt_prst16" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst16" = "0"
+    Info (12134): Parameter "c_cnt_in_src16" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en16" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en16" = "false"
+    Info (12134): Parameter "c_cnt_hi_div17" = "1"
+    Info (12134): Parameter "c_cnt_lo_div17" = "1"
+    Info (12134): Parameter "c_cnt_prst17" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst17" = "0"
+    Info (12134): Parameter "c_cnt_in_src17" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en17" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en17" = "false"
+    Info (12134): Parameter "pll_vco_div" = "2"
+    Info (12134): Parameter "pll_cp_current" = "20"
+    Info (12134): Parameter "pll_bwctrl" = "4000"
+    Info (12134): Parameter "pll_output_clk_frequency" = "445.499999 MHz"
+    Info (12134): Parameter "pll_fractional_division" = "3908420153"
+    Info (12134): Parameter "mimic_fbclk_type" = "none"
+    Info (12134): Parameter "pll_fbclk_mux_1" = "glb"
+    Info (12134): Parameter "pll_fbclk_mux_2" = "m_cnt"
+    Info (12134): Parameter "pll_m_cnt_in_src" = "ph_mux_clk"
+    Info (12134): Parameter "pll_slf_rst" = "true"
+Info (12128): Elaborating entity "dps_extra_kick" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 769
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 769
+Info (12128): Elaborating entity "dprio_init" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 784
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 784
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1961
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1961
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1972
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1972
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1983
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1983
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1994
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 1994
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 2005
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 2005
+Info (12128): Elaborating entity "altera_cyclonev_pll" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Warning (10034): Output port "extclk" at altera_cyclonev_pll.v(632) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 632
+Warning (10034): Output port "clkout[0]" at altera_cyclonev_pll.v(637) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 637
+Warning (10034): Output port "loaden" at altera_cyclonev_pll.v(641) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 641
+Warning (10034): Output port "lvdsclk" at altera_cyclonev_pll.v(642) has no driver File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 642
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Info (12128): Elaborating entity "altera_cyclonev_pll_base" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 1153
+Info (12131): Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 1153
+Info (12128): Elaborating entity "pll_cfg_hdmi" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1069
+Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 271
+Info (12130): Elaborated megafunction instantiation "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 271
+Info (12133): Instantiated megafunction "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 271
+    Info (12134): Parameter "depth" = "3"
+Info (12128): Elaborating entity "dyn_phase_shift" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 1169
+Info (12128): Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_0" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2060
+Info (12128): Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_1" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2071
+Info (12128): Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_2" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2082
+Info (12128): Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_3" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2093
+Info (12128): Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_4" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2104
+Info (12128): Elaborating entity "self_reset" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|self_reset:self_reset_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 1173
+Info (12128): Elaborating entity "dprio_mux" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dprio_mux:dprio_mux_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 1211
+Info (12128): Elaborating entity "fpll_dprio_init" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|fpll_dprio_init:fpll_dprio_init_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 1230
+Info (12128): Elaborating entity "shadowmask" for hierarchy "shadowmask:HDMI_shadowmask" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1163
+Info (12128): Elaborating entity "osd" for hierarchy "osd:hdmi_osd" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1186
+Info (12128): Elaborating entity "csync" for hierarchy "csync:csync_hdmi" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1189
+Info (12128): Elaborating entity "altddio_out" for hierarchy "altddio_out:hdmiclk_ddr" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1282
+Info (12130): Elaborated megafunction instantiation "altddio_out:hdmiclk_ddr" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1282
+Info (12133): Instantiated megafunction "altddio_out:hdmiclk_ddr" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1282
+    Info (12134): Parameter "extend_oe_disable" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "invert_output" = "OFF"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altddio_out"
+    Info (12134): Parameter "oe_reg" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_high" = "OFF"
+    Info (12134): Parameter "width" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/ddio_out_b2j.tdf
+    Info (12023): Found entity 1: ddio_out_b2j File: C:/Workspace/Git/Chip8_MiSTer/db/ddio_out_b2j.tdf Line: 28
+Info (12128): Elaborating entity "ddio_out_b2j" for hierarchy "altddio_out:hdmiclk_ddr|ddio_out_b2j:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altddio_out.tdf Line: 101
+Info (12128): Elaborating entity "altddio_out" for hierarchy "altddio_out:vgaclk_ddr" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1363
+Info (12130): Elaborated megafunction instantiation "altddio_out:vgaclk_ddr" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1363
+Info (12133): Instantiated megafunction "altddio_out:vgaclk_ddr" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1363
+    Info (12134): Parameter "extend_oe_disable" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "invert_output" = "OFF"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altddio_out"
+    Info (12134): Parameter "oe_reg" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_high" = "OFF"
+    Info (12134): Parameter "width" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/ddio_out_1oj.tdf
+    Info (12023): Found entity 1: ddio_out_1oj File: C:/Workspace/Git/Chip8_MiSTer/db/ddio_out_1oj.tdf Line: 30
+Info (12128): Elaborating entity "ddio_out_1oj" for hierarchy "altddio_out:vgaclk_ddr|ddio_out_1oj:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altddio_out.tdf Line: 101
+Info (12128): Elaborating entity "scanlines" for hierarchy "scanlines:VGA_scanlines" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1384
+Info (12128): Elaborating entity "yc_out" for hierarchy "yc_out:yc_out" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1437
+Info (12128): Elaborating entity "vga_out" for hierarchy "vga_out:vga_scaler_out" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1472
+Info (12128): Elaborating entity "pll_audio" for hierarchy "pll_audio:pll_audio" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1562
+Info (12128): Elaborating entity "pll_audio_0002" for hierarchy "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio/pll_audio_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio/pll_audio_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_audio/pll_audio_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "24.576000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "audio_out" for hierarchy "audio_out:audio_out" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1600
+Info (12128): Elaborating entity "i2s" for hierarchy "audio_out:audio_out|i2s:i2s" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 88
+Info (12128): Elaborating entity "spdif" for hierarchy "audio_out:audio_out|spdif:toslink" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 99
+Info (12128): Elaborating entity "sigma_delta_dac" for hierarchy "audio_out:audio_out|sigma_delta_dac:sd_l" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 107
+Info (12128): Elaborating entity "IIR_filter" for hierarchy "audio_out:audio_out|IIR_filter:IIR_filter" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 200
+Info (12128): Elaborating entity "iir_filter_tap" for hierarchy "audio_out:audio_out|IIR_filter:IIR_filter|iir_filter_tap:iir_tap_0" File: C:/Workspace/Git/Chip8_MiSTer/sys/iir_filter.v Line: 82
+Info (12128): Elaborating entity "DC_blocker" for hierarchy "audio_out:audio_out|DC_blocker:dcb_l" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 211
+Info (12128): Elaborating entity "aud_mix_top" for hierarchy "audio_out:audio_out|aud_mix_top:audmix_l" File: C:/Workspace/Git/Chip8_MiSTer/sys/audio_out.v Line: 238
+Info (12128): Elaborating entity "alsa" for hierarchy "alsa:alsa" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1640
+Info (12128): Elaborating entity "sync_fix" for hierarchy "sync_fix:sync_v" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1691
+Info (12128): Elaborating entity "emu" for hierarchy "emu:emu" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 1864
+Warning (10030): Net "ioctl_wait" at Chip8.sv(204) has no driver or initial value, using a default initial value '0' File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 204
+Info (12128): Elaborating entity "hps_io" for hierarchy "emu:emu|hps_io:hps_io" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 240
+Info (10264): Verilog HDL Case Statement information at hps_io.sv(419): all case item expressions in this case statement are onehot File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 419
+Info (10264): Verilog HDL Case Statement information at hps_io.sv(448): all case item expressions in this case statement are onehot File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 448
+Info (12128): Elaborating entity "video_calc" for hierarchy "emu:emu|hps_io:hps_io|video_calc:video_calc" File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 231
+Info (12128): Elaborating entity "ps2_device" for hierarchy "emu:emu|hps_io:hps_io|ps2_device:keyboard" File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 585
+Info (12128): Elaborating entity "chip8_joystick" for hierarchy "emu:emu|chip8_joystick:chip8_joystick" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 250
+Info (10264): Verilog HDL Case Statement information at chip8_joystick.sv(54): all case item expressions in this case statement are onehot File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8_joystick.sv Line: 54
+Info (12128): Elaborating entity "pll" for hierarchy "emu:emu|pll:pll" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 311
+Info (12128): Elaborating entity "pll_0002" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst" File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll.v Line: 24
+Info (12128): Elaborating entity "altera_pll" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll/pll_0002.v Line: 91
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll/pll_0002.v Line: 91
+Info (12133): Instantiated megafunction "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Workspace/Git/Chip8_MiSTer/rtl/pll/pll_0002.v Line: 91
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "14.085120 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "util_posedge" for hierarchy "emu:emu|util_posedge:ErrorPosedge" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 360
+Info (12128): Elaborating entity "util_delay" for hierarchy "emu:emu|util_posedge:ErrorPosedge|util_delay:delay" File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/misc.v Line: 78
+Info (12128): Elaborating entity "util_negedge" for hierarchy "emu:emu|util_negedge:downloadingNegedge" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 363
+Info (12128): Elaborating entity "chip8" for hierarchy "emu:emu|chip8:chip8machine" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 429
+Info (12128): Elaborating entity "framebuffer" for hierarchy "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 110
+Info (12128): Elaborating entity "ps2in" for hierarchy "emu:emu|chip8:chip8machine|ps2in:Ps2Decoder" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 124
+Info (12128): Elaborating entity "cpu_memory" for hierarchy "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 164
+Warning (10850): Verilog HDL warning at cpu_memory.v(38): number of words (46) in memory file does not match the number of elements in the address range [384:4095] File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu_memory.v Line: 38
+Warning (10850): Verilog HDL warning at cpu_memory.v(40): number of words (164) in memory file does not match the number of elements in the address range [512:4095] File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu_memory.v Line: 40
+Info (12128): Elaborating entity "vga_block" for hierarchy "emu:emu|chip8:chip8machine|vga_block:Vga" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 186
+Warning (10230): Verilog HDL assignment warning at vga_block.v(52): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 52
+Warning (10230): Verilog HDL assignment warning at vga_block.v(57): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 57
+Warning (10230): Verilog HDL assignment warning at vga_block.v(67): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 67
+Warning (10230): Verilog HDL assignment warning at vga_block.v(69): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 69
+Warning (10230): Verilog HDL assignment warning at vga_block.v(70): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 70
+Warning (10230): Verilog HDL assignment warning at vga_block.v(71): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 71
+Warning (10230): Verilog HDL assignment warning at vga_block.v(72): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 72
+Warning (10230): Verilog HDL assignment warning at vga_block.v(115): truncated value with size 32 to match size of target (11) File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 115
+Info (12128): Elaborating entity "vga_sync" for hierarchy "emu:emu|chip8:chip8machine|vga_block:Vga|vga_sync:SyncGenerator" File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 110
+Info (12128): Elaborating entity "display" for hierarchy "emu:emu|chip8:chip8machine|vga_block:Vga|display:Display" File: C:/Workspace/Git/Chip8_MiSTer/rtl/vga_block.v Line: 144
+Info (12128): Elaborating entity "bit_shifter" for hierarchy "emu:emu|chip8:chip8machine|vga_block:Vga|display:Display|bit_shifter:Shifter" File: C:/Workspace/Git/Chip8_MiSTer/rtl/display.v Line: 115
+Info (12128): Elaborating entity "blitter" for hierarchy "emu:emu|chip8:chip8machine|blitter:Blitter" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 211
+Warning (10230): Verilog HDL assignment warning at blitter.v(264): truncated value with size 7 to match size of target (4) File: C:/Workspace/Git/Chip8_MiSTer/rtl/blitter.v Line: 264
+Info (10264): Verilog HDL Case Statement information at blitter.v(110): all case item expressions in this case statement are onehot File: C:/Workspace/Git/Chip8_MiSTer/rtl/blitter.v Line: 110
+Info (10264): Verilog HDL Case Statement information at blitter.v(168): all case item expressions in this case statement are onehot File: C:/Workspace/Git/Chip8_MiSTer/rtl/blitter.v Line: 168
+Info (12128): Elaborating entity "cpu" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU" File: C:/Workspace/Git/Chip8_MiSTer/rtl/chip8.v Line: 250
+Warning (10230): Verilog HDL assignment warning at cpu.v(200): truncated value with size 32 to match size of target (13) File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 200
+Info (12128): Elaborating entity "util_sync_domain" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|util_sync_domain:vsync_sync_inst" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 95
+Info (12128): Elaborating entity "edge_detect" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|edge_detect:KeyMatrixEdgeDetect" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 107
+Info (12128): Elaborating entity "rng" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|rng:RandomNumberGenerator" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 138
+Info (12128): Elaborating entity "bcd" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|bcd:BcdDecoder" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 150
+Warning (10230): Verilog HDL assignment warning at bcd.v(32): truncated value with size 8 to match size of target (7) File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/bcd.v Line: 32
+Warning (10230): Verilog HDL assignment warning at bcd.v(47): truncated value with size 7 to match size of target (4) File: C:/Workspace/Git/Chip8_MiSTer/rtl/util/bcd.v Line: 47
+Info (12128): Elaborating entity "CpuRegisters" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|CpuRegisters:Registers" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 198
+Info (12128): Elaborating entity "edge_detect" for hierarchy "emu:emu|chip8:chip8machine|cpu:CPU|edge_detect:Clk60HzEdge" File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 239
+Info (12128): Elaborating entity "video_mixer" for hierarchy "emu:emu|video_mixer:video_mixer" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 514
+Info (12128): Elaborating entity "video_freezer" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_mixer.sv Line: 81
+Info (12128): Elaborating entity "sync_lock" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer|sync_lock:vs_lock" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freezer.sv Line: 47
+Info (12128): Elaborating entity "sync_lock" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer|sync_lock:hs_lock" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freezer.sv Line: 59
+Info (12128): Elaborating entity "gamma_corr" for hierarchy "emu:emu|video_mixer:video_mixer|gamma_corr:gamma" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_mixer.sv Line: 131
+Info (12128): Elaborating entity "scandoubler" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_mixer.sv Line: 166
+Info (12128): Elaborating entity "Hq2x" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x" File: C:/Workspace/Git/Chip8_MiSTer/sys/scandoubler.v Line: 117
+Info (12128): Elaborating entity "DiffCheck" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|DiffCheck:diffcheck0" File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 69
+Info (12128): Elaborating entity "Blend" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|Blend:blender" File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 76
+Info (12128): Elaborating entity "hq2x_in" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in" File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 115
+Info (12128): Elaborating entity "hq2x_buf" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf0" File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 245
+Info (12128): Elaborating entity "hq2x_buf" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out" File: C:/Workspace/Git/Chip8_MiSTer/sys/hq2x.sv Line: 136
+Info (12128): Elaborating entity "video_freak" for hierarchy "emu:emu|video_freak:video_freak" File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 539
+Info (12128): Elaborating entity "video_scale_int" for hierarchy "emu:emu|video_freak:video_freak|video_scale_int:scale" File: C:/Workspace/Git/Chip8_MiSTer/sys/video_freak.sv Line: 136
+Warning (12030): Port "extclk" on the entity instantiation of "cyclonev_pll" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|cntsel_temp[4]" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 425
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|cntsel_temp[3]" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 425
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|cntsel_temp[2]" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 425
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|cntsel_temp[1]" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 425
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|cntsel_temp[0]" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 425
+        Warning (14320): Synthesized away node "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|gnd" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 427
+Info (19018): Gated clocks are found and converted to use clock enables
+    Info (19019): Convert gated clock comb~synth
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer emu:emu|cpu_clk File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 303
+    Warning (19017): Found clock multiplexer emu:emu|chip8:chip8machine|comb~0
+Info (286030): Timing-Driven Synthesis is running
+Warning (276027): Inferred dual-clock RAM node "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|gamma_curve_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276020): Inferred RAM node "emu:emu|chip8:chip8machine|cpu:CPU|rpl_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|ram_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|ram_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "shadowmask:HDMI_shadowmask|mask_lut_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "ascal:ascal|o_dpram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "ascal:ascal|o_h_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "ascal:ascal|o_v_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "ascal:ascal|o_a_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "emu:emu|chip8:chip8machine|cpu:CPU|stack" is uninferred due to asynchronous read logic File: C:/Workspace/Git/Chip8_MiSTer/rtl/cpu.v Line: 154
+    Info (276006): RAM logic "emu:emu|hps_io:hps_io|ps2_device:keyboard|fifo" is uninferred due to "logic" being set as ramstyle synthesis attribute File: C:/Workspace/Git/Chip8_MiSTer/sys/hps_io.sv Line: 736
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "emu:emu|SD_CS" feeding internal logic into a wire File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 104
+Info (19000): Inferred 24 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 96
+        Info (286033): Parameter WIDTHAD_A set to 9
+        Info (286033): Parameter NUMWORDS_A set to 512
+        Info (286033): Parameter WIDTH_B set to 96
+        Info (286033): Parameter WIDTHAD_B set to 9
+        Info (286033): Parameter NUMWORDS_B set to 512
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf1|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf0|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|gamma_curve_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 768
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 768
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|chip8:chip8machine|cpu:CPU|rpl_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/Chip8.ram0_cpu_memory_6853a5ec.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|ram_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/Chip8.ram0_cpu_memory_6853a5ec.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 9
+        Info (286033): Parameter NUMWORDS_A set to 512
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 9
+        Info (286033): Parameter NUMWORDS_B set to 512
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|ram_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 9
+        Info (286033): Parameter NUMWORDS_A set to 512
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 9
+        Info (286033): Parameter NUMWORDS_B set to 512
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "osd:vga_osd|osd_buffer_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "osd:hdmi_osd|osd_buffer_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "shadowmask:HDMI_shadowmask|mask_lut_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 11
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 11
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|i_dpram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 128
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 128
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|pal1_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 48
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 48
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|o_dpram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 128
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 128
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to CLOCK1
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|o_h_poly_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 40
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 40
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|o_v_poly_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 40
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 40
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ascal:ascal|o_a_poly_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 40
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 40
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "emu:emu|pal_stage_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 5
+        Info (286033): Parameter WIDTH set to 8
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "yc_out:yc_out|phase[1].y_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 5
+        Info (286033): Parameter WIDTH set to 12
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "shadowmask:HDMI_shadowmask|vid_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 4
+        Info (286033): Parameter WIDTH set to 81
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "ascal:ascal|o_vpix_inner[2].r_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 4
+        Info (286033): Parameter WIDTH set to 24
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "dv_d1_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter WIDTH set to 76
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "vga_out:vga_scaler_out|din1_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter WIDTH set to 31
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+Info (12130): Elaborated megafunction instantiation "osd:vga_osd|altsyncram:osd_buffer_rtl_0"
+Info (12133): Instantiated megafunction "osd:vga_osd|altsyncram:osd_buffer_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i6k1.tdf
+    Info (12023): Found entity 1: altsyncram_i6k1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_i6k1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "shadowmask:HDMI_shadowmask|altsyncram:mask_lut_rtl_0"
+Info (12133): Instantiated megafunction "shadowmask:HDMI_shadowmask|altsyncram:mask_lut_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "11"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "11"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k9j1.tdf
+    Info (12023): Found entity 1: altsyncram_k9j1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_k9j1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:i_dpram_rtl_0"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:i_dpram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "128"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "128"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g9j1.tdf
+    Info (12023): Found entity 1: altsyncram_g9j1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_g9j1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "yc_out:yc_out|altshift_taps:phase[1].y_rtl_0"
+Info (12133): Instantiated megafunction "yc_out:yc_out|altshift_taps:phase[1].y_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "5"
+    Info (12134): Parameter "WIDTH" = "12"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_ruu.tdf
+    Info (12023): Found entity 1: shift_taps_ruu File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_ruu.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hr91.tdf
+    Info (12023): Found entity 1: altsyncram_hr91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_hr91.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_rhf.tdf
+    Info (12023): Found entity 1: cntr_rhf File: C:/Workspace/Git/Chip8_MiSTer/db/cntr_rhf.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_b9c.tdf
+    Info (12023): Found entity 1: cmpr_b9c File: C:/Workspace/Git/Chip8_MiSTer/db/cmpr_b9c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "shadowmask:HDMI_shadowmask|altshift_taps:vid_rtl_0"
+Info (12133): Instantiated megafunction "shadowmask:HDMI_shadowmask|altshift_taps:vid_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "4"
+    Info (12134): Parameter "WIDTH" = "81"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_0vu.tdf
+    Info (12023): Found entity 1: shift_taps_0vu File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_0vu.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pr91.tdf
+    Info (12023): Found entity 1: altsyncram_pr91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_pr91.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_phf.tdf
+    Info (12023): Found entity 1: cntr_phf File: C:/Workspace/Git/Chip8_MiSTer/db/cntr_phf.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "altshift_taps:dv_d1_rtl_0"
+Info (12133): Instantiated megafunction "altshift_taps:dv_d1_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "WIDTH" = "76"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_4vu.tdf
+    Info (12023): Found entity 1: shift_taps_4vu File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_4vu.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0s91.tdf
+    Info (12023): Found entity 1: altsyncram_0s91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_0s91.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ohf.tdf
+    Info (12023): Found entity 1: cntr_ohf File: C:/Workspace/Git/Chip8_MiSTer/db/cntr_ohf.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_a9c.tdf
+    Info (12023): Found entity 1: cmpr_a9c File: C:/Workspace/Git/Chip8_MiSTer/db/cmpr_a9c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altshift_taps:o_vpix_inner[2].r_rtl_0"
+Info (12133): Instantiated megafunction "ascal:ascal|altshift_taps:o_vpix_inner[2].r_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "4"
+    Info (12134): Parameter "WIDTH" = "24"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_agv.tdf
+    Info (12023): Found entity 1: shift_taps_agv File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_agv.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jr91.tdf
+    Info (12023): Found entity 1: altsyncram_jr91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_jr91.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_v_poly_mem_rtl_0"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:o_v_poly_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "40"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "40"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o9j1.tdf
+    Info (12023): Found entity 1: altsyncram_o9j1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_o9j1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "96"
+    Info (12134): Parameter "WIDTHAD_A" = "9"
+    Info (12134): Parameter "NUMWORDS_A" = "512"
+    Info (12134): Parameter "WIDTH_B" = "96"
+    Info (12134): Parameter "WIDTHAD_B" = "9"
+    Info (12134): Parameter "NUMWORDS_B" = "512"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_07n1.tdf
+    Info (12023): Found entity 1: altsyncram_07n1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_07n1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|altshift_taps:pal_stage_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|altshift_taps:pal_stage_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "5"
+    Info (12134): Parameter "WIDTH" = "8"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_tev.tdf
+    Info (12023): Found entity 1: shift_taps_tev File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_tev.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ro91.tdf
+    Info (12023): Found entity 1: altsyncram_ro91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_ro91.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|altsyncram:gamma_curve_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|altsyncram:gamma_curve_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "768"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "768"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3aj1.tdf
+    Info (12023): Found entity 1: altsyncram_3aj1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_3aj1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf1|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf1|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_dpram_rtl_0"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:o_dpram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "128"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "128"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "CLOCK1"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_32k1.tdf
+    Info (12023): Found entity 1: altsyncram_32k1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_32k1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "ascal:ascal|altsyncram:pal1_mem_rtl_0"
+Info (12133): Instantiated megafunction "ascal:ascal|altsyncram:pal1_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "48"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "48"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2aj1.tdf
+    Info (12023): Found entity 1: altsyncram_2aj1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_2aj1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "vga_out:vga_scaler_out|altshift_taps:din1_rtl_0"
+Info (12133): Instantiated megafunction "vga_out:vga_scaler_out|altshift_taps:din1_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "WIDTH" = "31"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_quu.tdf
+    Info (12023): Found entity 1: shift_taps_quu File: C:/Workspace/Git/Chip8_MiSTer/db/shift_taps_quu.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dr91.tdf
+    Info (12023): Found entity 1: altsyncram_dr91 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_dr91.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|chip8:chip8machine|cpu:CPU|altsyncram:rpl_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|chip8:chip8machine|cpu:CPU|altsyncram:rpl_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_60n1.tdf
+    Info (12023): Found entity 1: altsyncram_60n1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_60n1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/Chip8.ram0_cpu_memory_6853a5ec.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tsu1.tdf
+    Info (12023): Found entity 1: altsyncram_tsu1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_tsu1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|altsyncram:ram_rtl_1"
+Info (12133): Instantiated megafunction "emu:emu|chip8:chip8machine|cpu_memory:CpuMemory|altsyncram:ram_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/Chip8.ram0_cpu_memory_6853a5ec.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_73o1.tdf
+    Info (12023): Found entity 1: altsyncram_73o1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_73o1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "9"
+    Info (12134): Parameter "NUMWORDS_A" = "512"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "9"
+    Info (12134): Parameter "NUMWORDS_B" = "512"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c3q1.tdf
+    Info (12023): Found entity 1: altsyncram_c3q1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_c3q1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|altsyncram:ram_rtl_1"
+Info (12133): Instantiated megafunction "emu:emu|chip8:chip8machine|framebuffer:VGAFramebuffer|altsyncram:ram_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "9"
+    Info (12134): Parameter "NUMWORDS_A" = "512"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "9"
+    Info (12134): Parameter "NUMWORDS_B" = "512"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m9j1.tdf
+    Info (12023): Found entity 1: altsyncram_m9j1 File: C:/Workspace/Git/Chip8_MiSTer/db/altsyncram_m9j1.tdf Line: 28
+Warning (12241): 25 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17026): Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 7 WYSIWYG logic cells and I/Os untouched
+Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+    Warning (13051): Converted the fanout from the open-drain buffer "emu:emu|SD_SCK" to the node "emu:emu|SD_SCK" into a wire File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 101
+    Warning (13051): Converted the fanout from the open-drain buffer "emu:emu|SD_MOSI" to the node "emu:emu|SD_MOSI" into a wire File: C:/Workspace/Git/Chip8_MiSTer/Chip8.sv Line: 102
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "pll_cfg_hdmi:pll_cfg_hdmi|phase_done" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 165
+Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+    Warning (13051): Converted the fanout from the open-drain buffer "HDMI_I2C_SCL" to the node "hdmi_scl_en" into a wire File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 30
+Info (17049): 1268 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|generic_lcell_comb:lcell_dprio_read|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_0|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_1|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_2|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_3|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_4|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|generic_lcell_comb:lcell_fpll_0_1|combout" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 2179
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|up_dn" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 167
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|phase_en" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 166
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dprio_ser_shift_load" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/pll_cfg_hdmi.v Line: 159
+    Info (17048): Logic cell "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|gnd" File: C:/Workspace/Git/Chip8_MiSTer/sys/pll_cfg/altera_pll_reconfig_core.v Line: 1919
+Info (144001): Generated suppressed messages file C:/Workspace/Git/Chip8_MiSTer/output_files/Chip8.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 39 node(s), including 2 DDIO, 2 PLL, 0 transceiver and 0 LCELL
+Warning: RST port on the PLL is not properly connected on instance pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning: RST port on the PLL is not properly connected on instance emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "HDMI_TX_INT" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 44
+    Warning (15610): No output dependent on input pin "SD_SPI_MISO" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 100
+    Warning (15610): No output dependent on input pin "ADC_SDO" File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 110
+Info (21057): Implemented 25230 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 97 output pins
+    Info (21060): Implemented 32 bidirectional pins
+    Info (21061): Implemented 23923 logic cells
+    Info (21064): Implemented 1107 RAM segments
+    Info (21065): Implemented 2 PLLs
+    Info (21062): Implemented 33 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 5577 megabytes
+    Info: Processing ended: Sun Nov 15 18:40:41 2026
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:01:34
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 18:40:42 2026
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Chip8 -c Chip8
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = Chip8
+Info: Revision = Chip8
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+    Info (16304): Mode behavior is affected by advanced setting Placement Effort Multiplier (default for this mode is 4.0)
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (119006): Selected device 5CSEBA6U23I7 for design "Chip8"
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Warning: RST port on the PLL is not properly connected on instance pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning (21300): LOCKED port on the PLL is not properly connected on instance "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
+Warning: RST port on the PLL is not properly connected on instance emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning (21300): LOCKED port on the PLL is not properly connected on instance "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
+Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info (184020): Starting Fitter periphery placement operations
+Info (11178): Promoted 8 clocks (7 global, 1 regional)
+    Info (11162): sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|h2f_rst_n[0]~CLKENA0 with 25 fanout uses global clock CLKCTRL_G11
+    Info (11162): sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|h2f_user0_clk[0]~CLKENA0 with 937 fanout uses global clock CLKCTRL_G10
+    Info (11162): aspi_sck~CLKENA0 with 129 fanout uses regional clock CLKCTRL_R8
+        Info (11177): Node drives Regional Clock Region 0 from (0, 37) to (51, 81)
+    Info (11162): hdmi_tx_clk~CLKENA0 with 84 fanout uses global clock CLKCTRL_G5
+    Info (11162): pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|divclk[0]~CLKENA0 with 4955 fanout uses global clock CLKCTRL_G4
+    Info (11162): vga_tx_clk~CLKENA0 with 3 fanout uses global clock CLKCTRL_G6
+    Info (11162): pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 1524 fanout uses global clock CLKCTRL_G14
+    Info (11162): emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 5255 fanout uses global clock CLKCTRL_G7
+Info (11191): Automatically promoted 2 clocks (2 global)
+    Info (11162): FPGA_CLK2_50~inputCLKENA0 with 2234 fanout uses global clock CLKCTRL_G3
+    Info (11162): FPGA_CLK1_50~inputCLKENA0 with 705 fanout uses global clock CLKCTRL_G0
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Info (332104): Reading SDC File: 'sys/sys_top.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0]} -divide_by 3 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin} -divide_by 512 -multiply_by 4563 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 512 -multiply_by 4279 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 17 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+    Info (332110): create_generated_clock -source {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 512 -multiply_by 4183 -duty_cycle 50.00 -name {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 29 -duty_cycle 50.00 -name {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332104): Reading SDC File: 'Chip8.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332060): Node: emu:emu|clk_cpu_fast was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|cpu:CPU|hires is being clocked by emu:emu|clk_cpu_fast
+Warning (332060): Node: emu:emu|clk_12k was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|reset is being clocked by emu:emu|clk_12k
+Warning (332060): Node: emu:emu|clk_1m_r was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|clk_cpu_slow is being clocked by emu:emu|clk_1m_r
+Warning (332060): Node: emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|ready was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|keyboard_matrix[14] is being clocked by emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|ready
+Warning (332060): Node: emu:emu|hps_io:hps_io|ps2_device:keyboard|ps2_clk_out was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|data[6] is being clocked by emu:emu|hps_io:hps_io|ps2_device:keyboard|ps2_clk_out
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll  from: refclkin  to: fbclk
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_762
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_920
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_7
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_6
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_4
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_3
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_2
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 12 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):    2.448 emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]
+    Info (332111):   70.992 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk
+    Info (332111):   20.000 FPGA_CLK1_50
+    Info (332111):   20.000 FPGA_CLK2_50
+    Info (332111):   20.000 FPGA_CLK3_50
+    Info (332111):  100.000     hdmi_sck
+    Info (332111):    2.393 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]
+    Info (332111):   40.682 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk
+    Info (332111):    6.732 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk
+    Info (332111):    2.244 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]
+    Info (332111):   10.000      spi_sck
+    Info (332111):   10.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk
+Info (176233): Starting register packing
+Warning (176250): Ignoring invalid fast I/O register assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Info (176235): Finished register packing
+    Extra Info (176218): Packed 83 registers into blocks of type Block RAM
+    Extra Info (176218): Packed 784 registers into blocks of type DSP block
+    Extra Info (176218): Packed 27 registers into blocks of type I/O output buffer
+    Extra Info (176220): Created 150 register duplicates
+Info (128000): Starting physical synthesis optimizations for speed
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:20
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176218): Packed 228 registers into blocks of type DSP block
+    Extra Info (176220): Created 156 register duplicates
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:35
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:52
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:19
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 7% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 25% of the available device resources in the region that extends from location X22_Y35 to location X32_Y45
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:36
+Info (11888): Total time spent on timing analysis during the Fitter is 28.53 seconds.
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:20
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning (169064): Following 20 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+    Info (169065): Pin SDRAM_DQ[0] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[1] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[2] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[3] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[4] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[5] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[6] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[7] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[8] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[9] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[10] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[11] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[12] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[13] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[14] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[15] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 48
+    Info (169065): Pin USER_IO[0] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[1] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[3] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[6] has a permanently disabled output enable File: C:/Workspace/Git/Chip8_MiSTer/sys/sys_top.v Line: 125
+Info (144001): Generated suppressed messages file C:/Workspace/Git/Chip8_MiSTer/output_files/Chip8.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 8692 megabytes
+    Info: Processing ended: Sun Nov 15 18:45:22 2026
+    Info: Elapsed time: 00:04:40
+    Info: Total CPU time (on all processors): 00:26:45
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 18:45:23 2026
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Chip8 -c Chip8
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 5040 megabytes
+    Info: Processing ended: Sun Nov 15 18:45:32 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
+Info (293026): Skipped module PowerPlay Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 18:45:32 2026
+Info: Command: quartus_sta Chip8 -c Chip8
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Info (332104): Reading SDC File: 'sys/sys_top.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0]} -divide_by 3 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin} -divide_by 512 -multiply_by 4563 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 512 -multiply_by 4279 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 17 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+    Info (332110): create_generated_clock -source {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 512 -multiply_by 4183 -duty_cycle 50.00 -name {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 29 -duty_cycle 50.00 -name {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332104): Reading SDC File: 'Chip8.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332060): Node: emu:emu|clk_cpu_fast was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|cpu:CPU|hires~DUPLICATE is being clocked by emu:emu|clk_cpu_fast
+Warning (332060): Node: emu:emu|clk_1m_r was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|clk_cpu_slow is being clocked by emu:emu|clk_1m_r
+Warning (332060): Node: emu:emu|clk_12k was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|reset is being clocked by emu:emu|clk_12k
+Warning (332060): Node: emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|ready was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|keyboard_matrix[1] is being clocked by emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|ready
+Warning (332060): Node: emu:emu|hps_io:hps_io|ps2_device:keyboard|ps2_clk_out was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register emu:emu|chip8:chip8machine|ps2in:Ps2Decoder|ready is being clocked by emu:emu|hps_io:hps_io|ps2_device:keyboard|ps2_clk_out
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll  from: refclkin  to: fbclk
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_762
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_920
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_7
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_6
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_4
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_3
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_2
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332146): Worst-case setup slack is 0.720
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.720               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     3.896               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     4.378               0.000 spi_sck 
+    Info (332119):     7.260               0.000 FPGA_CLK1_50 
+    Info (332119):    10.075               0.000 FPGA_CLK2_50 
+    Info (332119):    16.542               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    55.779               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.245
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.245               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.248               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.253               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.273               0.000 FPGA_CLK1_50 
+    Info (332119):     0.362               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     0.432               0.000 FPGA_CLK2_50 
+    Info (332119):     0.455               0.000 spi_sck 
+Info (332146): Worst-case recovery slack is 3.960
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.960               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     7.528               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):    16.540               0.000 FPGA_CLK1_50 
+    Info (332119):    68.001               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.693
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.693               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.890               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     1.257               0.000 FPGA_CLK1_50 
+    Info (332119):     1.917               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case minimum pulse width slack is 1.122
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.122               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
+    Info (332119):     1.196               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     1.224               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     1.941               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     3.597               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     4.208               0.000 spi_sck 
+    Info (332119):     7.897               0.000 FPGA_CLK2_50 
+    Info (332119):     9.201               0.000 FPGA_CLK1_50 
+    Info (332119):     9.730               0.000 FPGA_CLK3_50 
+    Info (332119):    18.909               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    34.080               0.000 emu|pll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332114): Report Metastability: Found 476 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 476
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.994
+    Info (332114): Worst Case Available Settling Time: 4.048 ns
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 5275 megabytes
+    Info: Processing ended: Sun Nov 15 18:45:36 2026
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 79 warnings
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4610 megabytes
+    Info: Processing ended: Sun Nov 15 18:45:37 2026
+    Info: Elapsed time: 00:05:44
+    Info: Total CPU time (on all processors): 00:31:31

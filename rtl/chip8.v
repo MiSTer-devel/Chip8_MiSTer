@@ -45,6 +45,7 @@ module chip8(
 	
 	input				ps2_data,
 	input				ps2_clk,
+	input [15:0]	joy_keys,	 // gamepad keys, ORed with the keyboard
 	
 	input				uploading,
 	input				upload_en,
@@ -222,7 +223,7 @@ cpu CPU(
 	// Keys are masked while uploading: a key edge releases a halted CPU
 	// for one instruction (the singlestep hack), which must not happen
 	// while the RAM port belongs to the uploader.
-	.keyMatrix(uploading ? 16'd0 : keyboard_matrix),
+	.keyMatrix(uploading ? 16'd0 : (keyboard_matrix | joy_keys)),
 	
 	.ram_en(cpu_en),
 	.ram_wr(cpu_wr),
