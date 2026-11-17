@@ -13,11 +13,9 @@ SuperChip has traditionally been implemented as a virtual machine, but this is a
 
 Press F12 to bring up the OSD. From here you can select a .CH8-file to load.
 
-The picture has the shape it had on a COSMAC VIP, the machine CHIP-8 was written for: the analog output is the VIP's own raster (one lores pixel is one CDP1861 dot, a fixed 15.7 kHz 240p frame of 262 lines, or 31 kHz with the scandoubler), and Original on HDMI is the same shape, about 1.74:1 (1703:980), matching the COSMAC VIP core. Pixels are slightly taller than wide, as on the real machine. Aspect ratio and Scale otherwise work as in other MiSTer cores.
+Video output timings match COSMAC VIP (original CHIP-8 target). 15.7kHz support (60Hz SD CRT).
 
-Palette selects the two colours of the picture: White, Amber, Green, Inverted, LCD (the look of earlier releases) or Custom. A custom palette is a 16-byte MiSTer Game Boy .gbp file; its first colour is used for lit dots and its last for the background.
-
-The menu also allows the CPU speed to be selected, at roughly 500 or 1250 instructions per second. Neither models a particular real machine. Some games are better played on the slower setting, some on the faster.
+Palettes are supported via [.gbp](https://www.nortakales.com/page/gbpEditor). For examples see the [Palettes](https://github.com/MiSTer-devel/Gameboy_MiSTer/tree/master/Palette) folder in the Gameboy_MiSTer repository.
 
 The Chip-8 machine has a hex keypad for input. This has been mapped to the PC keyboard as follows:
 
@@ -26,6 +24,16 @@ The Chip-8 machine has a hex keypad for input. This has been mapped to the PC ke
     4 5 6 D   Q W E R
     7 8 9 E   A S D F
     A 0 B F   Z X C V
+
+There are also several joystick automapping profiles that correspond with many games. Try a few for a given game and you'll often find one that works pretty well.
+
+                    U D L R   A B Y X   L R Se St   UL UR DL DR
+    0 8-way         2 8 4 6   5 0 A B   C D E  F    1  3  7  9
+    1 SNES          2 8 4 6   A 5 0 B   C D E  F    1  3  7  9
+    2 CHIP-8        5 8 7 9   6 4 2 0   C D E  F    1  3  A  B
+    3 SCHIP 3-C     E F 3 C   A 0 5 B   4 6 2  1    7  9  8  D
+    4 SCHIP 7-8     3 6 7 8   1 4 A 0   C D E  F    -  -  -  -
+    5 Paddle        1 4      (U=C & D=D for pad 2)
 
 # Download #
 

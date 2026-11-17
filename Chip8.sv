@@ -85,9 +85,8 @@ hps_io #(.CONF_STR(CONF_STR),.PS2DIV(4000)) hps_io
 	.joystick_1(joystick_1)
 );
 
-// There is one keypad, so both pads press the same keys, except in Paddle
-// mode where each pad gets its own pair. Modes 6 and 7 have no menu entry
-// and act as 8-way.
+
+
 wire [15:0] joy1_keys, joy2_keys;
 chip8_joystick chip8_joystick
 (
@@ -109,9 +108,6 @@ wire [15:0] joy_keys = joy1_keys | joy2_keys;
 
 
 
-
-// A palette (menu index 2) must not touch CHIP-8 memory or reset the machine.
-// Everything else is a program.
 wire pal_download = ioctl_download && ioctl_index[5:0] == 6'd2;
 wire rom_download = ioctl_download && !pal_download;
 
@@ -152,6 +148,7 @@ assign BUTTONS = 0;
 assign {UART_RTS, UART_TXD, UART_DTR} = 0;
 
 
+
 wire clk_sys; // 50MHz
 wire clk_cpu_fast, clk_cpu_slow; // 6.25KHz or 2.5KHz
 wire clk_video; // 14.08512MHz = 8x the VIP's 1861 dot clock; also CLK_VIDEO
@@ -168,8 +165,6 @@ pll pll
 	.locked(locked)
 );
 
-// The PLL VCO is set by the VIP video clock and has no 1 MHz multiple, so the
-// 1 MHz divider source comes from the 50 MHz input instead.
 reg [4:0] clkdiv_1m_count = 0;
 reg       clk_1m_r = 0;
 always @(posedge CLK_50M) begin
@@ -258,8 +253,6 @@ chip8 chip8machine(
 
 	.cpu_halt(rom_download),
 
-	// One fixed 15.7kHz raster. The aspect ratio option belongs to the HDMI
-	// scaler; it must not reshape the picture on the analog output.
 	.ntsc(1'b1),
 	.vga_wide(1'b0),
 
@@ -286,12 +279,10 @@ chip8 chip8machine(
 	.error(error)
 );
 
-// Palettes for the 1-bit picture: {dot on, dot off}
 
-// A custom palette is a 16-byte MiSTer Game Boy .gbp file (four RGB888
-// colours and four spare bytes). As in the Studio II core, the first colour
-// is used for lit dots and the last for the background. Only a complete file
-// is committed.
+
+// .gbp palettes
+
 reg [127:0] pal_stage;
 reg  [47:0] pal_custom = {24'hFFFFFF, 24'h000000};
 
@@ -316,11 +307,7 @@ always @(*) begin
 	endcase
 end
 
-// The display logic runs on CLK_VIDEO itself, 8 clocks per VIP dot. As on
-// the VIP core, ce_pix samples every 2nd clock (4 samples per dot, 448 per
-// line, a 256-sample playfield) and every 4th clock for the scandoubler. Dot,
-// blanking and sync edges all fall on multiples of 4 clocks with no pipeline
-// lag between them, so the free-running phase needs no alignment.
+
 
 wire scandoubler = scale || forced_scandoubler;
 
@@ -371,10 +358,7 @@ video_mixer #(.LINE_LENGTH(256), .GAMMA(1)) video_mixer
 	.VGA_DE(vga_de)
 );
 
-// Original is the playfield's shape on a COSMAC VIP, the machine CHIP-8 was
-// written for: 64 dots of 390/112 square pixels each (NTSC, 240 lines) by 128
-// lines of 262.5/262, which gives 1703:980 (about 1.74:1). This matches the
-// border-hidden Original of the COSMAC VIP core.
+
 
 wire [1:0] ar = status[122:121];
 

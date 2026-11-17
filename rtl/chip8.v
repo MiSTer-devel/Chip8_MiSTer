@@ -18,9 +18,9 @@
 module chip8(
 	input				res,
 	
-	input				disp_clk,	 // 14.085.120 Hz (NTSC) or 25.152.000 Hz (VGA)
-	input				cpu_clk,	 // 20.000 Hz clock
-	input				blit_clk, // 100.000.000 Hz clock, or as fast as it can get.
+	input				disp_clk,	// 14.085.120 Hz (NTSC) or 25.152.000 Hz (VGA)
+	input				cpu_clk,	// 20.000 Hz clock
+	input				blit_clk,	// 100.000.000 Hz clock, or as fast as it can get.
 	
 	input				cpu_halt,
 	
@@ -34,7 +34,6 @@ module chip8(
 	output [2:1]	vga_blue,
 	output			vga_de,
 
-	// 1-bit video: lit dot, plus blanking that frames the playfield
 	output			vga_pixel,
 	output			vga_hblank,
 	output			vga_vblank,
@@ -220,9 +219,6 @@ cpu CPU(
 	.vsync_in(vga_beam_outside),
 	.halt(cpu_halt || uploading),
 	
-	// Keys are masked while uploading: a key edge releases a halted CPU
-	// for one instruction (the singlestep hack), which must not happen
-	// while the RAM port belongs to the uploader.
 	.keyMatrix(uploading ? 16'd0 : (keyboard_matrix | joy_keys)),
 	
 	.ram_en(cpu_en),

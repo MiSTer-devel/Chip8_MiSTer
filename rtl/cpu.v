@@ -126,8 +126,7 @@ wire [3:0] keyMatrix_selected =
 	keyMatrix_edge[15] ? 4'd15 :
 	4'bX;
 
-// 16 flag registers rather than the 8 of the HP48, so that Fx75/Fx85 work
-// for every x (as modern SuperChip programs expect).
+// Fx75/Fx85 fix
 reg [7:0]	rpl[0:15];
 
 wire [7:0] randomNumber;
@@ -486,9 +485,7 @@ always @(posedge clk) begin
 							state <= `STATE_RPL_R;
 						end
 						default: begin
-							// Unknown opcode (0nnn machine code calls, 5xy1
-							// and the like): skip it rather than stall here
-							// forever.
+
 							state <= `STATE_SETUP_R1;
 						end
 					endcase

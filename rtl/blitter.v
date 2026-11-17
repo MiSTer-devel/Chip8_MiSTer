@@ -180,9 +180,6 @@ task run_scroll_down;
 			end
 			`SCROLL_STATE_NEXT: begin
 				if (scrollDownSrc == 0 && buf_addr == 0) begin
-					// Scrolled by zero lines: nothing left to clear. Going
-					// to the clear state would wrap buf_addr and wipe the
-					// whole screen.
 					state <= `STATE_DONE;
 					buf_enable <= 0;
 					buf_write <= 0;

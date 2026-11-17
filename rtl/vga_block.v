@@ -37,8 +37,6 @@ module vga_block(
 	output [8:0]	fbuf_addr,
 	input  [15:0]	fbuf_data,
 
-	// 1-bit video for an external palette. The blanking frames the
-	// playfield only, not the whole raster.
 	output			hblank,
 	output			pixel_on
 );
@@ -56,10 +54,7 @@ wire [10:0] vSyncStart_VGA = 491;
 wire [10:0] vSyncEnd_VGA   = 493;
 wire [10:0] vEnd_VGA       = 524 - 1;
 	
-// NTSC configuration 240p: the COSMAC VIP raster. At 14.08512 MHz one
-// CDP1861 dot (1.76064 MHz) is 8 clocks, a 112-dot line is 896 clocks and the
-// frame is 262 lines, so a lores CHIP-8 pixel is exactly a VIP dot and the
-// playfield (64 dots x 128 lines) has the VIP's shape on a CRT.
+// VIP raster
 
 wire [10:0] hDisp_NTSC      = 768;
 wire [10:0] hSyncStart_NTSC = 784;
