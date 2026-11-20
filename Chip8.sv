@@ -171,6 +171,7 @@ localparam CONF_STR = {
 	"-;",
 	"O[2],CPU Speed,Fast,Slow;",
 	"-;",
+	"O[18:16],Joystick,8-way,SNES,CHIP-8,SCHIP 3-C,SCHIP 7-8,Paddle;",
 	"-;",
 	"O[15:13],Palette,White,Amber,Green,Inverted,LCD,Custom;",
 	"H0F2,GBP,Load Custom Palette;",
@@ -180,6 +181,8 @@ localparam CONF_STR = {
 	"O[10:8],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
 	"-;",
 	"R0,Reset;",
+	"J1,Fire,Extra,Key A,Key B,Key C,Key D,Key E,Key F;",
+	"jn,A,B,Y,X,L,R,Select,Start;",
 	"V,v",`BUILD_DATE
 };
 
@@ -204,6 +207,7 @@ wire [21:0] gamma_bus;
 wire [14:0] ldata, rdata;
 
 wire ps2_clk;
+wire [31:0] joystick_0, joystick_1;
 wire [7:0] ps2_dat;
 
 hps_io #(.CONF_STR(CONF_STR),.PS2DIV(4000)) hps_io
@@ -227,8 +231,32 @@ hps_io #(.CONF_STR(CONF_STR),.PS2DIV(4000)) hps_io
 	.status_menumask({15'd0, palette_sel != PAL_CUSTOM}),
 
 	.ps2_kbd_clk_out(ps2_clk),
-	.ps2_kbd_data_out(ps2_dat)
+	.ps2_kbd_data_out(ps2_dat),
+
+	.joystick_0(joystick_0),
+	.joystick_1(joystick_1)
 );
+
+
+
+wire [15:0] joy1_keys, joy2_keys;
+chip8_joystick chip8_joystick
+(
+	.joy(joystick_0),
+	.player(1'b0),
+	.mode(status[18:16]),
+	.keys(joy1_keys)
+);
+
+chip8_joystick chip8_joystick2
+(
+	.joy(joystick_1),
+	.player(1'b1),
+	.mode(status[18:16]),
+	.keys(joy2_keys)
+);
+
+wire [15:0] joy_keys = joy1_keys | joy2_keys;
 
 
 
@@ -392,6 +420,7 @@ chip8 chip8machine(
 
 	.ps2_data(ps2_dat[0]),
 	.ps2_clk(ps2_clk),
+	.joy_keys(joy_keys),
 
 	.uploading(rom_download),
 	.upload_en(ioctl_wr & rom_download),
