@@ -37,12 +37,13 @@ module display(
 	output reg [8:0]	fbuf_addr,
 	input		  [15:0]	fbuf_data,
 	
-	output	outside_playfield
+	output	outside_playfield,
+	output	lit	// a lit dot inside the playfield
 );
 
 wire[7:0] display_pixel_width = hires ? 8'd128 : 8'd64;
 
-wire[3:0] h_pixel_mult = hires ? 4'd5 : 4'd10;
+wire[3:0] h_pixel_mult = ntsc ? (hires ? 4'd4 : 4'd8) : (hires ? 4'd5 : 4'd10);
 wire[3:0] v_pixel_mult_VGA = wide ? (hires ? 4'd6 : 4'd12) : h_pixel_mult;
 wire[3:0] v_pixel_mult_NTSC = wide ? (hires ? 4'd3 : 4'd6) : (hires ? 4'd2 : 4'd4);
 wire[3:0] v_pixel_mult = ntsc ? v_pixel_mult_NTSC : v_pixel_mult_VGA;
@@ -123,5 +124,7 @@ assign {red, green, blue} =
 	color == 2 ? {3'd6, 3'd6, 2'd1} :
 	{3'd3, 3'd3, 2'd1};
 
+assign lit = inside_playfield && enable_pixel && pixel;
 
 endmodule
+

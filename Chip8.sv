@@ -167,27 +167,34 @@ module emu
 localparam CONF_STR = {
 	"Chip8;;",
 	"-;",
-	"F,CH8;",
+	"F1,CH8,Load Program;",
 	"-;",
-	"O4,Aspect ratio,4:3,16:9;",
-	"O8A,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
+	"O[2],CPU Speed,Fast,Slow;",
 	"-;",
-	"O2,CPU Speed,Fast,Slow;",
+	"-;",
+	"O[15:13],Palette,White,Amber,Green,Inverted,LCD,Custom;",
+	"H0F2,GBP,Load Custom Palette;",
+	"-;",
+	"O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];",
+	"O[6:5],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;",
+	"O[10:8],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
 	"-;",
 	"R0,Reset;",
-	//"J,",
 	"V,v",`BUILD_DATE
 };
 
 
 
-wire [31:0] status;
+wire [127:0] status;
+
+localparam PAL_CUSTOM = 3'd5;
+wire [2:0] palette_sel = status[15:13];
 wire        forced_scandoubler;
 
 wire        ioctl_wr;
 wire [24:0] ioctl_addr;
 wire  [7:0] ioctl_data;
-wire  [7:0] ioctl_index;
+wire [15:0] ioctl_index;
 wire        ioctl_download;
 wire 			ioctl_wait;
 //wire [10:0] ps2_key;
@@ -208,20 +215,25 @@ hps_io #(.CONF_STR(CONF_STR),.PS2DIV(4000)) hps_io
 	.ioctl_wr(ioctl_wr),
 	.ioctl_addr(ioctl_addr),
 	.ioctl_dout(ioctl_data),
+	.ioctl_index(ioctl_index),
 	.ioctl_wait(ioctl_wait),
 
 	.forced_scandoubler(forced_scandoubler),
 
+	.gamma_bus(gamma_bus),
+
 	.buttons(buttons),
 	.status(status),
+	.status_menumask({15'd0, palette_sel != PAL_CUSTOM}),
 
 	.ps2_kbd_clk_out(ps2_clk),
 	.ps2_kbd_data_out(ps2_dat)
-
 );
 
 
 
+wire pal_download = ioctl_download && ioctl_index[5:0] == 6'd2;
+wire rom_download = ioctl_download && !pal_download;
 
 reg [4:0] audio_count;
 always @(posedge clk_12k)
@@ -236,12 +248,7 @@ assign AUDIO_MIX = 0;
 
 assign LED_POWER = 0;
 assign LED_DISK  = 0;
-assign LED_USER  = ioctl_download;
-
-assign VIDEO_ARX    = status[4] ? 8'd16 : 8'd4;
-assign VIDEO_ARY    = status[4] ? 8'd9  : 8'd3;
-
-assign CE_PIXEL = 1'b1;
+assign LED_USER  = rom_download;
 
 wire [2:0] scale = status[10:8];
 wire [2:0] sl = scale ? scale - 1'd1 : 3'd0;
@@ -265,10 +272,11 @@ assign BUTTONS = 0;
 assign {UART_RTS, UART_TXD, UART_DTR} = 0;
 
 
+
 wire clk_sys; // 50MHz
-wire clk_cpu_fast, clk_cpu_slow; // 12.5KHz or 5KHz
-wire clk_video; // 13.5MHz
-wire clk_12k; // 12 KHz
+wire clk_cpu_fast, clk_cpu_slow; // 6.25KHz or 2.5KHz
+wire clk_video; // 14.08512MHz = 8x the VIP's 1861 dot clock; also CLK_VIDEO
+wire clk_12k; // 6 KHz, despite the name
 wire clk_1m; // 1MHz, for dividing into the required smaller amounts
 wire locked;
 wire cpu_clk;
@@ -278,9 +286,19 @@ pll pll
 (
 	.refclk(CLK_50M),
 	.outclk_0(clk_video),
-	.outclk_1(clk_1m),
 	.locked(locked)
 );
+
+reg [4:0] clkdiv_1m_count = 0;
+reg       clk_1m_r = 0;
+always @(posedge CLK_50M) begin
+	clkdiv_1m_count <= clkdiv_1m_count + 5'd1;
+	if (clkdiv_1m_count == 24) begin
+		clk_1m_r <= ~clk_1m_r;
+		clkdiv_1m_count <= 0;
+	end
+end
+assign clk_1m = clk_1m_r;
 
 reg [6:0] clkdiv_12_5_count;
 always @(posedge clk_1m) begin
@@ -319,7 +337,7 @@ wire error_posedge;
 util_posedge ErrorPosedge(clk_12k, 0, error, error_posedge);
 
 wire downloading_negedge;
-util_negedge downloadingNegedge(clk_12k, 0, ioctl_download, downloading_negedge);
+util_negedge downloadingNegedge(clk_12k, 0, rom_download, downloading_negedge);
 
 wire button1_posedge;
 util_posedge ButtonPosedge(clk_12k, 0, buttons[1] | status[0] | RESET, button1_posedge);
@@ -346,38 +364,143 @@ end
 
 wire [15:0] current_opcode;
 
+wire core_hs, core_vs;        // negative sync
+wire core_hblank, core_vblank; // these frame the playfield only
+wire core_pixel;
+
 chip8 chip8machine(
-	reset,
+	.res(reset),
 
-	clk_video,
-	cpu_clk,
-	clk_sys,
+	.disp_clk(clk_video),
+	.cpu_clk(cpu_clk),
+	.blit_clk(clk_sys),
 
-	ioctl_download,
-	1,
-	status[4],
+	.cpu_halt(rom_download),
 
-	VGA_HS, VGA_VS,
-	VGA_R[5:3], VGA_G[5:3], VGA_B[5:4],
-	VGA_DE,
+	.ntsc(1'b1),
+	.vga_wide(1'b0),
 
-	current_opcode,
+	.vga_hsync(core_hs),
+	.vga_vsync(core_vs),
+	.vga_pixel(core_pixel),
+	.vga_hblank(core_hblank),
+	.vga_vblank(core_vblank),
 
-	audio_enable,
+	.cpu_opcode(current_opcode),
 
-	ps2_dat,
-	ps2_clk,
+	.audio_enable(audio_enable),
 
-	ioctl_download,
-	ioctl_wr,
-	clk_sys,
-	ioctl_addr[11:0] + 12'd512,
-	ioctl_data,
+	.ps2_data(ps2_dat[0]),
+	.ps2_clk(ps2_clk),
 
-	error
+	.uploading(rom_download),
+	.upload_en(ioctl_wr & rom_download),
+	.upload_clk(clk_sys),
+	.upload_addr(ioctl_addr[11:0] + 12'd512),
+	.upload_data(ioctl_data),
+
+	.error(error)
 );
 
 
 
+// .gbp palettes
+
+reg [127:0] pal_stage;
+reg  [47:0] pal_custom = {24'hFFFFFF, 24'h000000};
+
+always @(posedge clk_sys) begin
+	if (pal_download && ioctl_wr && ioctl_addr < 25'd16) begin
+		pal_stage <= {pal_stage[119:0], ioctl_data};
+		if (ioctl_addr == 25'd15)
+			pal_custom <= {pal_stage[119:96], pal_stage[47:24]};
+	end
+end
+
+reg [47:0] pal;
+always @(*) begin
+	case (palette_sel)
+		3'd0:    pal = {24'hFFFFFF, 24'h000000}; // White
+		3'd1:    pal = {24'hFFBF5A, 24'h000000}; // Amber
+		3'd2:    pal = {24'h8FFF63, 24'h000000}; // Green
+		3'd3:    pal = {24'h000000, 24'hFFFFFF}; // Inverted
+		3'd4:    pal = {24'h6D6D55, 24'hDBDB55}; // LCD, the core's old look
+		3'd5:    pal = pal_custom;
+		default: pal = {24'hFFFFFF, 24'h000000};
+	endcase
+end
+
+
+
+wire scandoubler = scale || forced_scandoubler;
+
+reg  [1:0] ce_cnt = 0;
+reg        ce_pix = 0;
+reg        vid_hs, vid_vs, vid_hblank, vid_vblank;
+reg [23:0] vid_rgb;
+
+wire ce_next = scandoubler ? (ce_cnt == 2'd3) : ce_cnt[0];
+
+always @(posedge CLK_VIDEO) begin
+	ce_cnt <= ce_cnt + 2'd1;
+	ce_pix <= ce_next;
+
+	if (ce_next) begin
+		vid_hs <= ~core_hs;
+		vid_vs <= ~core_vs;
+		vid_hblank <= core_hblank;
+		vid_vblank <= core_vblank;
+		vid_rgb <= core_pixel ? pal[47:24] : pal[23:0];
+	end
+end
+
+wire vga_de;
+
+video_mixer #(.LINE_LENGTH(256), .GAMMA(1)) video_mixer
+(
+	.CLK_VIDEO(CLK_VIDEO),
+	.CE_PIXEL(CE_PIXEL),
+	.ce_pix(ce_pix),
+	.scandoubler(scandoubler),
+	.hq2x(scale == 1),
+	.gamma_bus(gamma_bus),
+	.R(vid_rgb[23:16]),
+	.G(vid_rgb[15:8]),
+	.B(vid_rgb[7:0]),
+	.HSync(vid_hs),
+	.VSync(vid_vs),
+	.HBlank(vid_hblank),
+	.VBlank(vid_vblank),
+	.HDMI_FREEZE(HDMI_FREEZE),
+	.freeze_sync(),
+	.VGA_R(VGA_R),
+	.VGA_G(VGA_G),
+	.VGA_B(VGA_B),
+	.VGA_VS(VGA_VS),
+	.VGA_HS(VGA_HS),
+	.VGA_DE(vga_de)
+);
+
+
+
+wire [1:0] ar = status[122:121];
+
+video_freak video_freak
+(
+	.CLK_VIDEO(CLK_VIDEO),
+	.CE_PIXEL(CE_PIXEL),
+	.VGA_VS(VGA_VS),
+	.HDMI_WIDTH(HDMI_WIDTH),
+	.HDMI_HEIGHT(HDMI_HEIGHT),
+	.VGA_DE(VGA_DE),
+	.VIDEO_ARX(VIDEO_ARX),
+	.VIDEO_ARY(VIDEO_ARY),
+	.VGA_DE_IN(vga_de),
+	.ARX((!ar) ? 12'd1703 : (ar - 1'd1)),
+	.ARY((!ar) ? 12'd980  : 12'd0),
+	.CROP_SIZE(12'd0),
+	.CROP_OFF(5'd0),
+	.SCALE(status[6:5])
+);
 
 endmodule
