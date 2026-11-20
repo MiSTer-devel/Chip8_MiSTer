@@ -179,7 +179,11 @@ task run_scroll_down;
 				scrollDownDest <= scrollDownDest - 1'd1;
 			end
 			`SCROLL_STATE_NEXT: begin
-				if (scrollDownSrc == 0) begin
+				if (scrollDownSrc == 0 && buf_addr == 0) begin
+					state <= `STATE_DONE;
+					buf_enable <= 0;
+					buf_write <= 0;
+				end else if (scrollDownSrc == 0) begin
 					subState <= `SCROLL_STATE_CLEAR;
 					buf_write <= 1;
 					buf_in <= 0;
@@ -225,7 +229,7 @@ wire	[8:0] hiresSpriteLine;
 assign hiresSpriteLine = {destY, 3'b000};
 
 wire	[8:0] loresSpriteLine;
-assign loresSpriteLine = {destY, 2'b00};
+assign loresSpriteLine = {destY[4:0], 2'b00};	// start row wraps at 32
 
 wire	[8:0]	spriteOffset;
 assign spriteOffset = hires ? destX[6:4] : destX[5:4];
