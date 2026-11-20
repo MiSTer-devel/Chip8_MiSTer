@@ -18,9 +18,9 @@
 module chip8(
 	input				res,
 	
-	input				disp_clk,	 // 13.500.000 or 25.152.000 Hz clock
-	input				cpu_clk,	 // 20.000 Hz clock
-	input				blit_clk, // 100.000.000 Hz clock, or as fast as it can get.
+	input				disp_clk,	// 14.085.120 Hz (NTSC) or 25.152.000 Hz (VGA)
+	input				cpu_clk,	// 20.000 Hz clock
+	input				blit_clk,	// 100.000.000 Hz clock, or as fast as it can get.
 	
 	input				cpu_halt,
 	
@@ -33,6 +33,10 @@ module chip8(
 	output [2:0]	vga_green,
 	output [2:1]	vga_blue,
 	output			vga_de,
+
+	output			vga_pixel,
+	output			vga_hblank,
+	output			vga_vblank,
 	
 	output [15:0]	cpu_opcode,
 	
@@ -40,6 +44,7 @@ module chip8(
 	
 	input				ps2_data,
 	input				ps2_clk,
+	input [15:0]	joy_keys,	 // gamepad keys, ORed with the keyboard
 	
 	input				uploading,
 	input				upload_en,
@@ -168,6 +173,8 @@ vga_block Vga(
 	.vsync (vga_vsync),
 	.beam_outside (vga_beam_outside),
 	.display_enable(vga_de),
+	.hblank (vga_hblank),
+	.pixel_on (vga_pixel),
 	
 	.red   (vga_red), 
 	.green (vga_green),
@@ -177,6 +184,8 @@ vga_block Vga(
 	.fbuf_data (vga_fbuf_data)
 );
 
+
+assign vga_vblank = vga_beam_outside;
 
 blitter Blitter(
 	.clk(blit_clk),
@@ -210,7 +219,7 @@ cpu CPU(
 	.vsync_in(vga_beam_outside),
 	.halt(cpu_halt || uploading),
 	
-	.keyMatrix(keyboard_matrix),
+	.keyMatrix(uploading ? 16'd0 : (keyboard_matrix | joy_keys)),
 	
 	.ram_en(cpu_en),
 	.ram_wr(cpu_wr),

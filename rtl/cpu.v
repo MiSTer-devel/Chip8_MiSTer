@@ -126,7 +126,8 @@ wire [3:0] keyMatrix_selected =
 	keyMatrix_edge[15] ? 4'd15 :
 	4'bX;
 
-reg [7:0]	rpl[0:7];
+// Fx75/Fx85 fix
+reg [7:0]	rpl[0:15];
 
 wire [7:0] randomNumber;
 
@@ -418,12 +419,12 @@ always @(posedge clk) begin
 							state <= `STATE_BLIT_START;
 						end
 						16'hE?9E: begin
-							if (keyMatrix[vx])
+							if (keyMatrix[vx[3:0]])
 								pc <= pc + 2'd2;
 							state <= `STATE_SETUP_R1;
 						end
 						16'hE?A1: begin
-							if (!keyMatrix[vx])
+							if (!keyMatrix[vx[3:0]])
 								pc <= pc + 2'd2;
 							state <= `STATE_SETUP_R1;
 						end
@@ -474,14 +475,18 @@ always @(posedge clk) begin
 							state <= `STATE_WAIT;
 							nstate <= `STATE_MEM_R;
 						end
-						16'hF?75: if (fvx[3] == 0) begin
+						16'hF?75: begin
 							d_write <= 0;
 							d_reg <= 0;
 							state <= `STATE_RPL_W;
 						end
-						16'hF?85: if (fvx[3] == 0) begin
+						16'hF?85: begin
 							bytecounter <= 0;
 							state <= `STATE_RPL_R;
+						end
+						default: begin
+
+							state <= `STATE_SETUP_R1;
 						end
 					endcase
 				end

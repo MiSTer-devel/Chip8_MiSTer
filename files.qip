@@ -4,6 +4,7 @@ set_global_assignment -name VERILOG_FILE rtl/bit_shifter.v
 set_global_assignment -name VERILOG_FILE rtl/blitter.v
 set_global_assignment -name VERILOG_FILE rtl/blitter.vh
 set_global_assignment -name VERILOG_FILE rtl/chip8.v
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/chip8_joystick.sv
 set_global_assignment -name VERILOG_FILE rtl/cpu_memory.v
 set_global_assignment -name VERILOG_FILE rtl/cpu.v
 set_global_assignment -name VERILOG_FILE rtl/display.v

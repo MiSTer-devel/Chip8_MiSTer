@@ -13,9 +13,11 @@ SuperChip has traditionally been implemented as a virtual machine, but this is a
 
 Press F12 to bring up the OSD. From here you can select a .CH8-file to load.
 
-The Chip-8 screen aspect is 2:1 which doesn't really fit on either a 4:3 or 16:9, you can select the type of screen you're using to view the output and the core will scale the output accordingly.
+Video output timings match COSMAC VIP (original CHIP-8 target). 15.7kHz support (60Hz SD CRT).
 
 The menu also allows the CPU speed to be selected. Some games are better played on slow, some on fast.
+
+Palettes are supported via [.gbp](https://www.nortakales.com/page/gbpEditor). For examples see the [Palettes](https://github.com/MiSTer-devel/Gameboy_MiSTer/tree/master/Palette) folder in the Gameboy_MiSTer repository.
 
 The Chip-8 machine has a hex keypad for input. This has been mapped to the PC keyboard as follows:
 
@@ -25,6 +27,15 @@ The Chip-8 machine has a hex keypad for input. This has been mapped to the PC ke
     7 8 9 E   A S D F
     A 0 B F   Z X C V
 
-# Download #
+There are also several joystick automapping profiles that correspond with many games. Try a few for a given game and you'll often find one that works pretty well.
 
+                    U D L R   A B Y X   L R Se St   UL UR DL DR
+    0 8-way         2 8 4 6   5 0 A B   C D E  F    1  3  7  9
+    1 SNES          2 8 4 6   A 5 0 B   C D E  F    1  3  7  9
+    2 CHIP-8        5 8 7 9   6 4 2 0   C D E  F    1  3  A  B
+    3 SCHIP 3-C     E F 3 C   A 0 5 B   4 6 2  1    7  9  8  D
+    4 SCHIP 7-8     3 6 7 8   1 4 A 0   C D E  F    -  -  -  -
+    5 Paddle        1 4      (U=C & D=D for pad 2)
+
+# Download #
 Downloads can be found in the [releases folder](https://github.com/MiSTer-devel/Chip8_MiSTer/tree/master/releases)

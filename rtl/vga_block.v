@@ -35,7 +35,10 @@ module vga_block(
 	
 	// Framebuffer
 	output [8:0]	fbuf_addr,
-	input  [15:0]	fbuf_data
+	input  [15:0]	fbuf_data,
+
+	output			hblank,
+	output			pixel_on
 );
 
 
@@ -51,17 +54,17 @@ wire [10:0] vSyncStart_VGA = 491;
 wire [10:0] vSyncEnd_VGA   = 493;
 wire [10:0] vEnd_VGA       = 524 - 1;
 	
-// NTSC configuration 240p (704x240)
+// VIP raster
 
-wire [10:0] hDisp_NTSC      = 704;
-wire [10:0] hSyncStart_NTSC = 728;
-wire [10:0] hSyncEnd_NTSC   = 791;
-wire [10:0] hEnd_NTSC       = 858 - 1;
+wire [10:0] hDisp_NTSC      = 768;
+wire [10:0] hSyncStart_NTSC = 784;
+wire [10:0] hSyncEnd_NTSC   = 848;
+wire [10:0] hEnd_NTSC       = 896 - 1;
 
 wire [10:0] vDisp_NTSC      = 480 / 2;
 wire [10:0] vSyncStart_NTSC = 486 / 2;
 wire [10:0] vSyncEnd_NTSC   = 496 / 2;
-wire [10:0] vEnd_NTSC       = 526 / 2 - 1;
+wire [10:0] vEnd_NTSC       = 262 - 1;
 
 
 // positive sync signals from sync generator
@@ -103,8 +106,11 @@ vga_sync SyncGenerator(
 
 // Display generator
 
-wire[10:0] disp_pixel_x = ntsc ? pixel_x - (704 - 640) / 2 : pixel_x;
-wire disp_display_enable = display_enable & (disp_pixel_x < 640);
+wire[10:0] pf_width = ntsc ? 11'd512 : 11'd640;
+wire[10:0] disp_pixel_x = ntsc ? pixel_x - (768 - 512) / 2 : pixel_x;
+wire disp_display_enable = display_enable & (disp_pixel_x < pf_width);
+
+assign hblank = !(pixel_x < (ntsc ? hDisp_NTSC : hDisp_VGA) && disp_pixel_x < pf_width);
 
 display Display(
 	.clk (clk),
@@ -128,7 +134,8 @@ display Display(
 	.fbuf_addr (fbuf_addr),
 	.fbuf_data (fbuf_data),
 	
-	.outside_playfield (beam_outside)
+	.outside_playfield (beam_outside),
+	.lit (pixel_on)
 );
 
 endmodule
