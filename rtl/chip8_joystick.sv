@@ -15,6 +15,9 @@ module chip8_joystick
 	output [15:0] keys
 );
 
+// 16-digit hex key per input, right-to-left:
+// R L D U, A B Y X, L R Select Start, UL UR DL DR.
+// "used" follows this order, "diag" gives diagonals separate keys.
 reg [63:0] map;
 reg [15:0] used;
 reg        diag;
